@@ -1,0 +1,10 @@
+C:\Users\Tiago TG\Desktop\Projeto_Inter\Tiago_Codes\Estoque_Pizzaria\bin\Debug\Estoque_Pizzaria.exe.config
+C:\Users\Tiago TG\Desktop\Projeto_Inter\Tiago_Codes\Estoque_Pizzaria\bin\Debug\Estoque_Pizzaria.exe
+C:\Users\Tiago TG\Desktop\Projeto_Inter\Tiago_Codes\Estoque_Pizzaria\bin\Debug\Estoque_Pizzaria.pdb
+C:\Users\Tiago TG\Desktop\Projeto_Inter\Tiago_Codes\Estoque_Pizzaria\obj\Debug\Estoque_Pizzaria.csproj.AssemblyReference.cache
+C:\Users\Tiago TG\Desktop\Projeto_Inter\Tiago_Codes\Estoque_Pizzaria\obj\Debug\Estoque_Pizzaria.Properties.Resources.resources
+C:\Users\Tiago TG\Desktop\Projeto_Inter\Tiago_Codes\Estoque_Pizzaria\obj\Debug\Estoque_Pizzaria.csproj.GenerateResource.cache
+C:\Users\Tiago TG\Desktop\Projeto_Inter\Tiago_Codes\Estoque_Pizzaria\obj\Debug\Estoque_Pizzaria.csproj.CoreCompileInputs.cache
+C:\Users\Tiago TG\Desktop\Projeto_Inter\Tiago_Codes\Estoque_Pizzaria\obj\Debug\Estoque_Pizzaria.exe
+C:\Users\Tiago TG\Desktop\Projeto_Inter\Tiago_Codes\Estoque_Pizzaria\obj\Debug\Estoque_Pizzaria.pdb
+C:\Users\Tiago TG\Desktop\Projeto_Inter\Tiago_Codes\Estoque_Pizzaria\obj\Debug\Estoque_Pizzaria.Form1.resources
