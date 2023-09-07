@@ -1,6 +1,6 @@
 ﻿namespace ProjetoInter
 {
-    partial class Login
+    partial class frmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.InputLogin = new System.Windows.Forms.TextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.InputSenha = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Funcao = new System.Windows.Forms.ComboBox();
             this.btnValidaAcesso = new System.Windows.Forms.Button();
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -48,12 +45,6 @@
             this.InputLogin.Name = "InputLogin";
             this.InputLogin.Size = new System.Drawing.Size(145, 20);
             this.InputLogin.TabIndex = 0;
-            this.InputLogin.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // InputSenha
             // 
@@ -70,7 +61,6 @@
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Usuário";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -92,7 +82,6 @@
             this.Funcao.Size = new System.Drawing.Size(144, 21);
             this.Funcao.TabIndex = 5;
             this.Funcao.Text = "Selecione sua função";
-            this.Funcao.SelectedIndexChanged += new System.EventHandler(this.Funcao_SelectedIndexChanged);
             // 
             // btnValidaAcesso
             // 
@@ -104,11 +93,6 @@
             this.btnValidaAcesso.Text = "Entrar";
             this.btnValidaAcesso.UseVisualStyleBackColor = false;
             // 
-            // contextMenuStrip2
-            // 
-            this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -118,9 +102,8 @@
             this.label3.Size = new System.Drawing.Size(157, 13);
             this.label3.TabIndex = 8;
             this.label3.Text = "Central de atendimento xxx-xxxx";
-            this.label3.Click += new System.EventHandler(this.label3_Click_1);
             // 
-            // Login
+            // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -132,9 +115,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.InputSenha);
             this.Controls.Add(this.InputLogin);
-            this.Name = "Login";
+            this.Name = "frmLogin";
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,13 +125,11 @@
         #endregion
 
         private System.Windows.Forms.TextBox InputLogin;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TextBox InputSenha;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox Funcao;
         private System.Windows.Forms.Button btnValidaAcesso;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
         private System.Windows.Forms.Label label3;
     }
 }

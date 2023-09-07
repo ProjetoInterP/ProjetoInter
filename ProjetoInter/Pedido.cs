@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjetoInter
 {
-    public partial class frmLogin : Form
+    public partial class frmPedido : Form
     {
-        public frmLogin()
+        public frmPedido()
         {
             InitializeComponent();
         }

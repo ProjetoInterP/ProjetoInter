@@ -8,3 +8,15 @@ C:\Users\IsseiofJusty\Downloads\ProjetoInter\ProjetoInter\obj\Debug\ProjetoInter
 C:\Users\IsseiofJusty\Downloads\ProjetoInter\ProjetoInter\obj\Debug\ProjetoInter.csproj.CoreCompileInputs.cache
 C:\Users\IsseiofJusty\Downloads\ProjetoInter\ProjetoInter\obj\Debug\ProjetoInter.exe
 C:\Users\IsseiofJusty\Downloads\ProjetoInter\ProjetoInter\obj\Debug\ProjetoInter.pdb
+C:\Users\IsseiofJusty\Downloads\ProjetoInter\ProjetoInterP\ProjetoInter\ProjetoInter\obj\Debug\ProjetoInter.csproj.AssemblyReference.cache
+C:\Users\IsseiofJusty\Downloads\ProjetoInter\ProjetoInterP\ProjetoInter\ProjetoInter\obj\Debug\ProjetoInter.exe
+C:\Users\IsseiofJusty\Downloads\ProjetoInter\ProjetoInterP\ProjetoInter\ProjetoInter\obj\Debug\ProjetoInter.pdb
+C:\Users\IsseiofJusty\Downloads\ProjetoInter\ProjetoInterP\ProjetoInter\ProjetoInter\bin\Debug\ProjetoInter.exe.config
+C:\Users\IsseiofJusty\Downloads\ProjetoInter\ProjetoInterP\ProjetoInter\ProjetoInter\bin\Debug\ProjetoInter.exe
+C:\Users\IsseiofJusty\Downloads\ProjetoInter\ProjetoInterP\ProjetoInter\ProjetoInter\bin\Debug\ProjetoInter.pdb
+C:\Users\IsseiofJusty\Downloads\ProjetoInter\ProjetoInterP\ProjetoInter\ProjetoInter\obj\Debug\ProjetoInter.frmCadFuncionario.resources
+C:\Users\IsseiofJusty\Downloads\ProjetoInter\ProjetoInterP\ProjetoInter\ProjetoInter\obj\Debug\ProjetoInter.frmLogin.resources
+C:\Users\IsseiofJusty\Downloads\ProjetoInter\ProjetoInterP\ProjetoInter\ProjetoInter\obj\Debug\ProjetoInter.Properties.Resources.resources
+C:\Users\IsseiofJusty\Downloads\ProjetoInter\ProjetoInterP\ProjetoInter\ProjetoInter\obj\Debug\ProjetoInter.csproj.GenerateResource.cache
+C:\Users\IsseiofJusty\Downloads\ProjetoInter\ProjetoInterP\ProjetoInter\ProjetoInter\obj\Debug\ProjetoInter.csproj.CoreCompileInputs.cache
+C:\Users\IsseiofJusty\Downloads\ProjetoInter\ProjetoInterP\ProjetoInter\ProjetoInter\obj\Debug\ProjetoInter.frmPedido.resources
