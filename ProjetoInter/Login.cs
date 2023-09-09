@@ -16,5 +16,26 @@ namespace ProjetoInter
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InputLogin_TextChanged(object sender, EventArgs e)
+        {
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InputSenha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
