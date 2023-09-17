@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoInter.DB;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,7 +42,7 @@ namespace ProjetoInter
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Fechar(object sender, EventArgs e)
@@ -50,6 +51,11 @@ namespace ProjetoInter
         }
 
         private void txtSenha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmCadFuncionario_Load(object sender, EventArgs e)
         {
 
         }

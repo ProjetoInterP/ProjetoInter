@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoInter.DB;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,6 +36,23 @@ namespace ProjetoInter
 
         private void InputSenha_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Logar(object sender, EventArgs e)
+        {
+            string login = InputLogin.Text;
+            string senha = InputSenha.Text;
+
+            // criando a instancia do banco de dados
+            PizzariaDB db = new PizzariaDB();
+
+            
 
         }
     }
