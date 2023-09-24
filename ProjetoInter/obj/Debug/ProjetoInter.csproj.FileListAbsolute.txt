@@ -87,3 +87,5 @@ C:\Users\Caiaque\Source\Repos\ProjetoInter\ProjetoInter\bin\Debug\System.Numeric
 C:\Users\Caiaque\Source\Repos\ProjetoInter\ProjetoInter\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Caiaque\Source\Repos\ProjetoInter\ProjetoInter\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Caiaque\Source\Repos\ProjetoInter\ProjetoInter\obj\Debug\ProjetoInter.csproj.CopyComplete
+C:\Users\Caiaque\source\repos\ProjetoInter\ProjetoInter\bin\Debug\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Caiaque\source\repos\ProjetoInter\ProjetoInter\bin\Debug\Microsoft.EntityFrameworkCore.Design.xml

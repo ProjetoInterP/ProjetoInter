@@ -236,6 +236,7 @@
             this.btnAdicionar.TabIndex = 18;
             this.btnAdicionar.Text = "Adicionar";
             this.btnAdicionar.UseVisualStyleBackColor = false;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click_1);
             // 
             // frmCadFuncionario
             // 

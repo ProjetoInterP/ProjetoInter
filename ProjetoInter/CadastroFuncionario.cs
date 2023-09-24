@@ -1,4 +1,5 @@
 ﻿using ProjetoInter.DB;
+using ProjetoInter.Modelos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -58,6 +59,26 @@ namespace ProjetoInter
         private void frmCadFuncionario_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAdicionar_Click_1(object sender, EventArgs e)
+        {
+            PizzariaDB _context = new PizzariaDB();
+
+            string txt_nome = txtNome.Text;
+            string txt_usuario = txtUsuario.Text;
+            string txt_senha = txtSenha.Text;
+            string txt_cargo = cmbAcesso.Text;
+
+            Usuario usuario = new Usuario
+            {
+                Nome = txt_nome,
+                Login = txt_usuario,
+                Senha = txt_senha,
+                Cargo = txt_cargo
+            };
+
+            _context.Usuarios.Add(usuario);
         }
     }
 }
