@@ -30,7 +30,6 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadFuncionario));
             this.lblNome = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblSenha = new System.Windows.Forms.Label();
@@ -45,6 +44,8 @@
             this.dgvCadastro = new System.Windows.Forms.DataGridView();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.btnAdicionar = new System.Windows.Forms.Button();
+            this.txtconfirmaSenha = new System.Windows.Forms.TextBox();
+            this.lblconfirmaSenha = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCadastro)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +67,7 @@
             this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(253)))));
-            this.lblUsuario.Location = new System.Drawing.Point(166, 162);
+            this.lblUsuario.Location = new System.Drawing.Point(166, 126);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(87, 24);
             this.lblUsuario.TabIndex = 1;
@@ -78,7 +79,7 @@
             this.lblSenha.BackColor = System.Drawing.Color.Transparent;
             this.lblSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(253)))));
-            this.lblSenha.Location = new System.Drawing.Point(348, 162);
+            this.lblSenha.Location = new System.Drawing.Point(335, 126);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(76, 24);
             this.lblSenha.TabIndex = 2;
@@ -107,7 +108,7 @@
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtUsuario.Location = new System.Drawing.Point(170, 188);
+            this.txtUsuario.Location = new System.Drawing.Point(170, 153);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(157, 22);
             this.txtUsuario.TabIndex = 5;
@@ -115,7 +116,7 @@
             // txtSenha
             // 
             this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtSenha.Location = new System.Drawing.Point(352, 188);
+            this.txtSenha.Location = new System.Drawing.Point(339, 153);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(152, 22);
             this.txtSenha.TabIndex = 6;
@@ -138,7 +139,7 @@
             this.lblPesquisar.BackColor = System.Drawing.Color.Transparent;
             this.lblPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblPesquisar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(253)))));
-            this.lblPesquisar.Location = new System.Drawing.Point(166, 335);
+            this.lblPesquisar.Location = new System.Drawing.Point(169, 311);
             this.lblPesquisar.Name = "lblPesquisar";
             this.lblPesquisar.Size = new System.Drawing.Size(108, 24);
             this.lblPesquisar.TabIndex = 8;
@@ -214,9 +215,9 @@
             // txtPesquisa
             // 
             this.txtPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtPesquisa.Location = new System.Drawing.Point(263, 338);
+            this.txtPesquisa.Location = new System.Drawing.Point(170, 338);
             this.txtPesquisa.Name = "txtPesquisa";
-            this.txtPesquisa.Size = new System.Drawing.Size(148, 22);
+            this.txtPesquisa.Size = new System.Drawing.Size(321, 22);
             this.txtPesquisa.TabIndex = 16;
             // 
             // btnAdicionar
@@ -236,14 +237,35 @@
             this.btnAdicionar.UseVisualStyleBackColor = false;
             this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click_1);
             // 
+            // txtconfirmaSenha
+            // 
+            this.txtconfirmaSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtconfirmaSenha.Location = new System.Drawing.Point(175, 216);
+            this.txtconfirmaSenha.Name = "txtconfirmaSenha";
+            this.txtconfirmaSenha.Size = new System.Drawing.Size(316, 22);
+            this.txtconfirmaSenha.TabIndex = 20;
+            // 
+            // lblconfirmaSenha
+            // 
+            this.lblconfirmaSenha.AutoSize = true;
+            this.lblconfirmaSenha.BackColor = System.Drawing.Color.Transparent;
+            this.lblconfirmaSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblconfirmaSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(253)))));
+            this.lblconfirmaSenha.Location = new System.Drawing.Point(169, 189);
+            this.lblconfirmaSenha.Name = "lblconfirmaSenha";
+            this.lblconfirmaSenha.Size = new System.Drawing.Size(169, 24);
+            this.lblconfirmaSenha.TabIndex = 19;
+            this.lblconfirmaSenha.Text = "Confirmar senha:";
+            // 
             // frmCadFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(31)))));
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(671, 548);
+            this.Controls.Add(this.txtconfirmaSenha);
+            this.Controls.Add(this.lblconfirmaSenha);
             this.Controls.Add(this.btnAdicionar);
             this.Controls.Add(this.txtPesquisa);
             this.Controls.Add(this.dgvCadastro);
@@ -284,5 +306,7 @@
         private System.Windows.Forms.DataGridView dgvCadastro;
         private System.Windows.Forms.TextBox txtPesquisa;
         private System.Windows.Forms.Button btnAdicionar;
+        private System.Windows.Forms.TextBox txtconfirmaSenha;
+        private System.Windows.Forms.Label lblconfirmaSenha;
     }
 }

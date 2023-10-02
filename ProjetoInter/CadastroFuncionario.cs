@@ -22,13 +22,6 @@ namespace ProjetoInter
             txtSenha.MaxLength = 10;
         }
 
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            GraphicsPath forma = new GraphicsPath();
-            forma.AddEllipse(0, 0, btnAdicionar.Width, btnAdicionar.Height);
-            btnAdicionar.Region = new Region(forma);
-        }
-
         private void btnRemover_Click(object sender, EventArgs e)
         {
             txtNome.Text = string.Empty;
