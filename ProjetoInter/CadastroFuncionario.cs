@@ -38,29 +38,6 @@ namespace ProjetoInter
             txtPesquisa.Text = string.Empty;
 
         }
-
-       
-
-        private void btnAdicionar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Fechar(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void txtSenha_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmCadFuncionario_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAdicionar_Click_1(object sender, EventArgs e)
         {
             PizzariaDB _context = new PizzariaDB();

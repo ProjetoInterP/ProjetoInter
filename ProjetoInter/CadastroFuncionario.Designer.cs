@@ -119,7 +119,6 @@
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(152, 22);
             this.txtSenha.TabIndex = 6;
-            this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
             // 
             // cmbAcesso
             // 
@@ -160,7 +159,6 @@
             this.btnEditar.TabIndex = 10;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.Fechar);
             // 
             // btnRemover
             // 
@@ -264,7 +262,6 @@
             this.Name = "frmCadFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Funcionario";
-            this.Load += new System.EventHandler(this.frmCadFuncionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCadastro)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
