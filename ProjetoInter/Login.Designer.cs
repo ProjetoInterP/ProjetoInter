@@ -64,7 +64,6 @@
             this.InputSenha.Name = "InputSenha";
             this.InputSenha.Size = new System.Drawing.Size(171, 20);
             this.InputSenha.TabIndex = 2;
-            this.InputSenha.TextChanged += new System.EventHandler(this.InputSenha_TextChanged);
             // 
             // InputFuncao
             // 
@@ -83,6 +82,8 @@
             // btnValidaAcesso
             // 
             this.btnValidaAcesso.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnValidaAcesso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnValidaAcesso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnValidaAcesso.Location = new System.Drawing.Point(330, 339);
             this.btnValidaAcesso.Name = "btnValidaAcesso";
             this.btnValidaAcesso.Size = new System.Drawing.Size(75, 23);
@@ -95,10 +96,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Peru;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.MintCream;
             this.label3.Location = new System.Drawing.Point(12, 422);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(157, 13);
+            this.label3.Size = new System.Drawing.Size(225, 16);
             this.label3.TabIndex = 8;
             this.label3.Text = "Central de atendimento xxx-xxxx";
             // 
@@ -133,7 +135,6 @@
             this.label5.Size = new System.Drawing.Size(134, 13);
             this.label5.TabIndex = 10;
             this.label5.Text = "Username or email address";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label1
             // 
@@ -170,9 +171,9 @@
             this.Controls.Add(this.InputFuncao);
             this.Controls.Add(this.InputSenha);
             this.Controls.Add(this.InputLogin);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin";
             this.Text = " ";
-            this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
