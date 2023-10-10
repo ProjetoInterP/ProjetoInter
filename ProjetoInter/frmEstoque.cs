@@ -16,5 +16,10 @@ namespace ProjetoInter
         {
             InitializeComponent();
         }
+
+        private void lblValor_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -25,6 +25,11 @@ namespace ProjetoInter.DB
 
         // informando para o entity que ele terá uma tabela chamada usuários e que a classe usuário dentro de modelos será mapeada para representar a tabela e os campos dentro do banco de dados
         public DbSet<Usuario> Usuarios { get; set; }
+    
+        public DbSet<Cliente> Clientes { get; set; }
 
+        public DbSet<Pedido> Pedidos { get; set; }
+        
+        public DbSet<Estoque> Estoque { get; set;}
     }
 }

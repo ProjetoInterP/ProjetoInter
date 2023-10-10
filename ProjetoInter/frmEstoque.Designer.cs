@@ -33,7 +33,6 @@
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.txtProcurarProd = new System.Windows.Forms.TextBox();
             this.lblProcurarProdut = new System.Windows.Forms.Label();
-            this.txtValor = new System.Windows.Forms.TextBox();
             this.lblValor = new System.Windows.Forms.Label();
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.lblCat = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@
             this.txtNomeProduto = new System.Windows.Forms.TextBox();
             this.lblNomeProduto = new System.Windows.Forms.Label();
             this.dgvProduto = new System.Windows.Forms.DataGridView();
+            this.cmbQuantidade = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,14 +108,6 @@
             this.lblProcurarProdut.TabIndex = 23;
             this.lblProcurarProdut.Text = "Procurar Produto:";
             // 
-            // txtValor
-            // 
-            this.txtValor.Location = new System.Drawing.Point(287, 138);
-            this.txtValor.Margin = new System.Windows.Forms.Padding(2);
-            this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(164, 20);
-            this.txtValor.TabIndex = 22;
-            // 
             // lblValor
             // 
             this.lblValor.AutoSize = true;
@@ -125,9 +117,10 @@
             this.lblValor.Location = new System.Drawing.Point(284, 120);
             this.lblValor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblValor.Name = "lblValor";
-            this.lblValor.Size = new System.Drawing.Size(43, 16);
+            this.lblValor.Size = new System.Drawing.Size(81, 16);
             this.lblValor.TabIndex = 21;
-            this.lblValor.Text = "Valor:";
+            this.lblValor.Text = "Quantidade";
+            this.lblValor.Click += new System.EventHandler(this.lblValor_Click);
             // 
             // cmbCategoria
             // 
@@ -208,19 +201,34 @@
             this.dgvProduto.Size = new System.Drawing.Size(308, 100);
             this.dgvProduto.TabIndex = 29;
             // 
+            // cmbQuantidade
+            // 
+            this.cmbQuantidade.FormattingEnabled = true;
+            this.cmbQuantidade.Items.AddRange(new object[] {
+            "Pizza",
+            "Refrigerante",
+            "Esfiha",
+            "Pizza Especial",
+            "Ingredientes"});
+            this.cmbQuantidade.Location = new System.Drawing.Point(287, 138);
+            this.cmbQuantidade.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbQuantidade.Name = "cmbQuantidade";
+            this.cmbQuantidade.Size = new System.Drawing.Size(112, 21);
+            this.cmbQuantidade.TabIndex = 30;
+            // 
             // frmEstoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(644, 427);
+            this.Controls.Add(this.cmbQuantidade);
             this.Controls.Add(this.dgvProduto);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnRemover);
             this.Controls.Add(this.btnAdicionar);
             this.Controls.Add(this.txtProcurarProd);
             this.Controls.Add(this.lblProcurarProdut);
-            this.Controls.Add(this.txtValor);
             this.Controls.Add(this.lblValor);
             this.Controls.Add(this.cmbCategoria);
             this.Controls.Add(this.lblCat);
@@ -244,7 +252,6 @@
         private System.Windows.Forms.Button btnAdicionar;
         private System.Windows.Forms.TextBox txtProcurarProd;
         private System.Windows.Forms.Label lblProcurarProdut;
-        private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.Label lblValor;
         private System.Windows.Forms.ComboBox cmbCategoria;
         private System.Windows.Forms.Label lblCat;
@@ -253,5 +260,6 @@
         private System.Windows.Forms.TextBox txtNomeProduto;
         private System.Windows.Forms.Label lblNomeProduto;
         private System.Windows.Forms.DataGridView dgvProduto;
+        private System.Windows.Forms.ComboBox cmbQuantidade;
     }
 }

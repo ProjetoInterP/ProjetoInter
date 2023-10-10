@@ -158,11 +158,18 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20230924184907_PizzariaInit.cs" />
-    <Compile Include="Migrations\20230924184907_PizzariaInit.designer.cs">
-      <DependentUpon>20230924184907_PizzariaInit.cs</DependentUpon>
+    <Compile Include="Migrations\20231009234249_ProjetoPizzariaDb Inicio.cs" />
+    <Compile Include="Migrations\20231009234249_ProjetoPizzariaDb Inicio.designer.cs">
+      <DependentUpon>20231009234249_ProjetoPizzariaDb Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20231010002504_Tabela Estoque.cs" />
+    <Compile Include="Migrations\20231010002504_Tabela Estoque.designer.cs">
+      <DependentUpon>20231010002504_Tabela Estoque.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\PizzariaDBModelSnapshot.cs" />
+    <Compile Include="Modelos\Cliente.cs" />
+    <Compile Include="Modelos\Estoque.cs" />
+    <Compile Include="Modelos\Pedido.cs" />
     <Compile Include="Modelos\Usuario.cs" />
     <Compile Include="Pedido.cs">
       <SubType>Form</SubType>
