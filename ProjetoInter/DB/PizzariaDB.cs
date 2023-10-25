@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Pomelo.EntityFrameworkCore.MySql.Storage;
+using ProjetoInter.DB.Configuration;
 using ProjetoInter.Modelos;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ namespace ProjetoInter.DB
         {
             if (!options.IsConfigured)
             {
-                var stringConexao = "Server=localhost;Database=projetopizzaria;User=root;Password=senha";
+                var stringConexao = "Server=localhost;Database=projetopizzaria;User=root;Password=digite sua senha aqui";
                 options.UseMySql(stringConexao);
             }
         }
@@ -31,5 +32,13 @@ namespace ProjetoInter.DB
         public DbSet<Pedido> Pedidos { get; set; }
         
         public DbSet<Estoque> Estoque { get; set;}
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new ClienteConfiguration());
+            modelBuilder.ApplyConfiguration(new EstoqueConfiguration());
+            modelBuilder.ApplyConfiguration(new PedidoConfiguration());
+            modelBuilder.ApplyConfiguration(new UsuarioConfiguration());
+        }
     }
 }

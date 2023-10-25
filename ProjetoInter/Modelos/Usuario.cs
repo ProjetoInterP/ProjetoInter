@@ -15,3 +15,4 @@ namespace ProjetoInter.Modelos
         public string Senha { get; set; }
     }
 }
+    

@@ -1,4 +1,5 @@
 ﻿using ProjetoInter.DB;
+using ProjetoInter.Modelos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,8 +34,22 @@ namespace ProjetoInter
             // criando a instancia do banco de dados
             PizzariaDB db = new PizzariaDB();
 
-            
+            Usuario user = db.Usuarios.FirstOrDefault(x => x.Login == login);
 
+            if (user != null)
+            {
+                if (user.Senha == senha)
+                {
+                    // redireciona para a pagina correta (home)
+                }
+                else
+                {
+                    // senha inválida
+                }
+            } else
+            {
+                // usuário não encontrado
+            }
         }
     }
 }

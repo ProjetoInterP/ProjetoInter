@@ -19,6 +19,8 @@ namespace ProjetoInter.Modelos
         // Relacionamento 1 pra muitos/ 1 pra N
 
         // propriedade que representa uma lista de pedidos
+
+        // Id é a chave primária 
         public List<Pedido> Pedidos { get; set; }
 
     }

@@ -145,6 +145,10 @@
     <Compile Include="CadastroFuncionario.Designer.cs">
       <DependentUpon>CadastroFuncionario.cs</DependentUpon>
     </Compile>
+    <Compile Include="DB\Configuration\ClienteConfiguration.cs" />
+    <Compile Include="DB\Configuration\EstoqueConfiguration.cs" />
+    <Compile Include="DB\Configuration\PedidoConfiguration.cs" />
+    <Compile Include="DB\Configuration\UsuarioConfiguration.cs" />
     <Compile Include="DB\PizzariaDB.cs" />
     <Compile Include="frmEstoque.cs">
       <SubType>Form</SubType>
@@ -165,6 +169,10 @@
     <Compile Include="Migrations\20231010002504_Tabela Estoque.cs" />
     <Compile Include="Migrations\20231010002504_Tabela Estoque.designer.cs">
       <DependentUpon>20231010002504_Tabela Estoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20231025013823_configuracaocampos.cs" />
+    <Compile Include="Migrations\20231025013823_configuracaocampos.designer.cs">
+      <DependentUpon>20231025013823_configuracaocampos.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\PizzariaDBModelSnapshot.cs" />
     <Compile Include="Modelos\Cliente.cs" />
