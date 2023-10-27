@@ -168,6 +168,12 @@
     <Compile Include="MenuAdministrador.Designer.cs">
       <DependentUpon>MenuAdministrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuFuncionario.Designer.cs">
+      <DependentUpon>MenuFuncionario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\20231009234249_ProjetoPizzariaDb Inicio.cs" />
     <Compile Include="Migrations\20231009234249_ProjetoPizzariaDb Inicio.designer.cs">
       <DependentUpon>20231009234249_ProjetoPizzariaDb Inicio.cs</DependentUpon>
@@ -204,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuAdministrador.resx">
       <DependentUpon>MenuAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuFuncionario.resx">
+      <DependentUpon>MenuFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pedido.resx">
       <DependentUpon>Pedido.cs</DependentUpon>
