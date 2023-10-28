@@ -243,6 +243,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\loginimg.png.png" />
+    <None Include="Resources\Funcionario.png" />
+    <None Include="Resources\sair.png" />
+    <None Include="Resources\pedido.png" />
+    <None Include="Resources\despensa %281%29.png" />
+    <None Include="Resources\cadastro.png" />
+    <None Include="Resources\fechar.png" />
     <None Include="Resources\WhatsApp Image 2023-0 %281%29.png" />
     <None Include="Resources\loginimg.png.png" />
   </ItemGroup>

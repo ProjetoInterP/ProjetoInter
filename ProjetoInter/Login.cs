@@ -82,6 +82,9 @@ namespace ProjetoInter
 
         }
 
-
+        private void picEncerar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
