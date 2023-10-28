@@ -16,5 +16,18 @@ namespace ProjetoInter
         {
             InitializeComponent();
         }
+
+        private void picVoltar_Click(object sender, EventArgs e)
+        {
+            //Volta para tela de Menu do Funcionário
+            frmMenuFuncionario pedidoFunc = new frmMenuFuncionario();
+            this.Hide();
+            pedidoFunc.Show();
+
+            //Volta para tela de Menu do Administrador
+            frmMenuAdministrador pedidoAdmin = new frmMenuAdministrador();
+            this.Hide();
+            pedidoAdmin.Show();
+        }
     }
 }

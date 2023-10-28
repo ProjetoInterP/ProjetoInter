@@ -14,25 +14,29 @@ namespace ProjetoInter
 {
     public partial class frmEstoque : Form
     {
+        private string cargoUsuário;
         public frmEstoque()
         {
-            InitializeComponent();
+            InitializeComponent();    
            
         }
 
-        private void lblValor_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void picVoltarEstoque_Click(object sender, EventArgs e)
         {
+            //Envia o usuario devolta para sua respectiva tela (Condição if em produção).
+           
+
+
             //Voltar para tela de Funcionario caso seja funcionario
             frmMenuFuncionario Funcionario = new frmMenuFuncionario();
+            this.Hide();
             Funcionario.ShowDialog();
 
             //Voltar para tela de Administrador caso seja Administrador
             frmMenuAdministrador Administrador = new frmMenuAdministrador();
+            this.Hide();
             Administrador.ShowDialog();
 
         }

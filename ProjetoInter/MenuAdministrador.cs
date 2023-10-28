@@ -38,6 +38,7 @@ namespace ProjetoInter
         {
             //Acesso a tela de Estoque como Administrador
             frmEstoque EstoqueAdmin = new frmEstoque();
+            this.Hide();
             EstoqueAdmin.ShowDialog();
 
         }
@@ -46,6 +47,7 @@ namespace ProjetoInter
         {
             //Acesso a tela de Pedidos como Administrador
             frmPedido PedidoAdmin = new frmPedido();
+            this.Hide();
             PedidoAdmin.ShowDialog();
         }
     }

@@ -71,7 +71,7 @@
             this.pnlPedidos.Controls.Add(this.panelClientes);
             this.pnlPedidos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlPedidos.Location = new System.Drawing.Point(0, 0);
-            this.pnlPedidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlPedidos.Margin = new System.Windows.Forms.Padding(4);
             this.pnlPedidos.Name = "pnlPedidos";
             this.pnlPedidos.Size = new System.Drawing.Size(1065, 823);
             this.pnlPedidos.TabIndex = 0;
@@ -82,12 +82,13 @@
             this.picVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picVoltar.Image = ((System.Drawing.Image)(resources.GetObject("picVoltar.Image")));
             this.picVoltar.Location = new System.Drawing.Point(9, 768);
-            this.picVoltar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picVoltar.Margin = new System.Windows.Forms.Padding(4);
             this.picVoltar.Name = "picVoltar";
             this.picVoltar.Size = new System.Drawing.Size(51, 41);
             this.picVoltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picVoltar.TabIndex = 4;
             this.picVoltar.TabStop = false;
+            this.picVoltar.Click += new System.EventHandler(this.picVoltar_Click);
             // 
             // panelContainerProdutos
             // 
@@ -101,7 +102,7 @@
             this.panelContainerProdutos.Controls.Add(this.dblProdutos);
             this.panelContainerProdutos.Controls.Add(this.picImagem);
             this.panelContainerProdutos.Location = new System.Drawing.Point(9, 416);
-            this.panelContainerProdutos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelContainerProdutos.Margin = new System.Windows.Forms.Padding(4);
             this.panelContainerProdutos.Name = "panelContainerProdutos";
             this.panelContainerProdutos.Size = new System.Drawing.Size(1048, 335);
             this.panelContainerProdutos.TabIndex = 3;
@@ -111,7 +112,7 @@
             this.picPesquisaProd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picPesquisaProd.Image = ((System.Drawing.Image)(resources.GetObject("picPesquisaProd.Image")));
             this.picPesquisaProd.Location = new System.Drawing.Point(893, 0);
-            this.picPesquisaProd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picPesquisaProd.Margin = new System.Windows.Forms.Padding(4);
             this.picPesquisaProd.Name = "picPesquisaProd";
             this.picPesquisaProd.Size = new System.Drawing.Size(51, 41);
             this.picPesquisaProd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -122,7 +123,7 @@
             // 
             this.txtPesquisaProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtPesquisaProd.Location = new System.Drawing.Point(371, 12);
-            this.txtPesquisaProd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPesquisaProd.Margin = new System.Windows.Forms.Padding(4);
             this.txtPesquisaProd.Name = "txtPesquisaProd";
             this.txtPesquisaProd.Size = new System.Drawing.Size(515, 30);
             this.txtPesquisaProd.TabIndex = 16;
@@ -132,7 +133,7 @@
             // 
             this.txtDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtDescricao.Location = new System.Drawing.Point(8, 242);
-            this.txtDescricao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescricao.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(319, 77);
@@ -147,7 +148,7 @@
             "Entrega",
             "Retirada"});
             this.cboTipoVenda.Location = new System.Drawing.Point(8, 194);
-            this.cboTipoVenda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboTipoVenda.Margin = new System.Windows.Forms.Padding(4);
             this.cboTipoVenda.MaximumSize = new System.Drawing.Size(319, 0);
             this.cboTipoVenda.MinimumSize = new System.Drawing.Size(319, 0);
             this.cboTipoVenda.Name = "cboTipoVenda";
@@ -185,7 +186,7 @@
             this.dblProdutos.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dblProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dblProdutos.Location = new System.Drawing.Point(369, 52);
-            this.dblProdutos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dblProdutos.Margin = new System.Windows.Forms.Padding(4);
             this.dblProdutos.Name = "dblProdutos";
             this.dblProdutos.RowHeadersWidth = 51;
             this.dblProdutos.Size = new System.Drawing.Size(667, 170);
@@ -194,7 +195,7 @@
             // picImagem
             // 
             this.picImagem.Location = new System.Drawing.Point(8, 11);
-            this.picImagem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picImagem.Margin = new System.Windows.Forms.Padding(4);
             this.picImagem.Name = "picImagem";
             this.picImagem.Size = new System.Drawing.Size(320, 158);
             this.picImagem.TabIndex = 0;
@@ -207,7 +208,7 @@
             this.panelContainerClientes.Controls.Add(this.txtPesquisaNome);
             this.panelContainerClientes.Controls.Add(this.dblClientes);
             this.panelContainerClientes.Location = new System.Drawing.Point(9, 97);
-            this.panelContainerClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelContainerClientes.Margin = new System.Windows.Forms.Padding(4);
             this.panelContainerClientes.Name = "panelContainerClientes";
             this.panelContainerClientes.Size = new System.Drawing.Size(1048, 240);
             this.panelContainerClientes.TabIndex = 2;
@@ -218,7 +219,7 @@
             this.picPesquisaClientes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picPesquisaClientes.Image = ((System.Drawing.Image)(resources.GetObject("picPesquisaClientes.Image")));
             this.picPesquisaClientes.Location = new System.Drawing.Point(500, 18);
-            this.picPesquisaClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picPesquisaClientes.Margin = new System.Windows.Forms.Padding(4);
             this.picPesquisaClientes.Name = "picPesquisaClientes";
             this.picPesquisaClientes.Size = new System.Drawing.Size(51, 41);
             this.picPesquisaClientes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -229,7 +230,7 @@
             // 
             this.txtPesquisaNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtPesquisaNome.Location = new System.Drawing.Point(19, 30);
-            this.txtPesquisaNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPesquisaNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtPesquisaNome.Name = "txtPesquisaNome";
             this.txtPesquisaNome.Size = new System.Drawing.Size(472, 30);
             this.txtPesquisaNome.TabIndex = 1;
@@ -241,7 +242,7 @@
             this.dblClientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dblClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dblClientes.Location = new System.Drawing.Point(19, 65);
-            this.dblClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dblClientes.Margin = new System.Windows.Forms.Padding(4);
             this.dblClientes.Name = "dblClientes";
             this.dblClientes.RowHeadersWidth = 51;
             this.dblClientes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -253,7 +254,7 @@
             this.panelProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(34)))));
             this.panelProdutos.Controls.Add(this.lblProdutos);
             this.panelProdutos.Location = new System.Drawing.Point(0, 356);
-            this.panelProdutos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelProdutos.Margin = new System.Windows.Forms.Padding(4);
             this.panelProdutos.Name = "panelProdutos";
             this.panelProdutos.Size = new System.Drawing.Size(1057, 53);
             this.panelProdutos.TabIndex = 1;
@@ -275,7 +276,7 @@
             this.panelClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(34)))));
             this.panelClientes.Controls.Add(this.lblClientes);
             this.panelClientes.Location = new System.Drawing.Point(4, 37);
-            this.panelClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelClientes.Margin = new System.Windows.Forms.Padding(4);
             this.panelClientes.Name = "panelClientes";
             this.panelClientes.Size = new System.Drawing.Size(1057, 53);
             this.panelClientes.TabIndex = 0;
@@ -302,7 +303,7 @@
             this.ClientSize = new System.Drawing.Size(1065, 823);
             this.Controls.Add(this.pnlPedidos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPedido";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pedido";
