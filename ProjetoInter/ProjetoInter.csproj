@@ -243,6 +243,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\loginimg.png.png" />
+    <None Include="Resources\atendente.png" />
     <None Include="Resources\Funcionario.png" />
     <None Include="Resources\sair.png" />
     <None Include="Resources\pedido.png" />

@@ -18,32 +18,28 @@ namespace ProjetoInter
             InitializeComponent();
         }
 
-        private void btnLogoutFuncionario_Click(object sender, EventArgs e)
-        {
-            //Volta para a tela de login
-            frmLogin Login = new frmLogin();
-            this.Hide();
-            Login.ShowDialog();
-            
-
-
-        }
-
-        private void btnPedidoFuncionario_Click(object sender, EventArgs e)
+        private void picPedidos_Click(object sender, EventArgs e)
         {
             //Acesso a tela de Pedidos como Funcionario
             frmPedido PedidoFuncionario = new frmPedido();
             this.Hide();
             PedidoFuncionario.ShowDialog();
-
         }
 
-        private void btnEstoqueFunc_Click(object sender, EventArgs e)
+        private void picEstoque_Click(object sender, EventArgs e)
         {
             //Acesso a tela de Estoque como Funcionario
             frmEstoque EstoqueFuncionario = new frmEstoque();
             this.Hide();
             EstoqueFuncionario.ShowDialog();
+        }
+
+        private void picLogout_Click(object sender, EventArgs e)
+        {
+            //Volta para a tela de login
+            frmLogin Login = new frmLogin();
+            this.Hide();
+            Login.ShowDialog();
         }
     }
 }

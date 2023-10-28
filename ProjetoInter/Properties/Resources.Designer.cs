@@ -63,6 +63,16 @@ namespace ProjetoInter.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap atendente {
+            get {
+                object obj = ResourceManager.GetObject("atendente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cadastro {
             get {
                 object obj = ResourceManager.GetObject("cadastro", resourceCulture);
