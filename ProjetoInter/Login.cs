@@ -51,5 +51,10 @@ namespace ProjetoInter
                 // usuário não encontrado
             }
         }
+
+        private void InputFuncao_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

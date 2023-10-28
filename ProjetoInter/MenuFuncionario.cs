@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace ProjetoInter
 {
-    public partial class MenuFuncionario : Form
+    public partial class frmMenuFuncionario : Form
     {
-        public MenuFuncionario()
+        public frmMenuFuncionario()
         {
             InitializeComponent();
         }
@@ -23,6 +23,8 @@ namespace ProjetoInter
             //Volta para a tela de login
             frmLogin Login = new frmLogin();
             Login.ShowDialog();
+            this.Close();
+
 
         }
 

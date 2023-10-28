@@ -78,6 +78,7 @@
             this.InputFuncao.Size = new System.Drawing.Size(171, 21);
             this.InputFuncao.TabIndex = 5;
             this.InputFuncao.Text = "Selecione sua função";
+            this.InputFuncao.SelectedIndexChanged += new System.EventHandler(this.InputFuncao_SelectedIndexChanged);
             // 
             // btnValidaAcesso
             // 
@@ -173,6 +174,7 @@
             this.Controls.Add(this.InputLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

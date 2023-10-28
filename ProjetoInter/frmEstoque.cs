@@ -28,11 +28,11 @@ namespace ProjetoInter
         private void picVoltarEstoque_Click(object sender, EventArgs e)
         {
             //Voltar para tela de Funcionario caso seja funcionario
-            MenuFuncionario Funcionario = new MenuFuncionario();
+            frmMenuFuncionario Funcionario = new frmMenuFuncionario();
             Funcionario.ShowDialog();
 
             //Voltar para tela de Administrador caso seja Administrador
-            MenuAdministrador Administrador = new MenuAdministrador();
+            frmMenuAdministrador Administrador = new frmMenuAdministrador();
             Administrador.ShowDialog();
 
         }
