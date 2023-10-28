@@ -50,5 +50,17 @@ namespace ProjetoInter
 
             _context.Usuarios.Add(usuario);
         }
+
+        private void picVoltarCadastro_Click(object sender, EventArgs e)
+        {
+
+            //Voltar para tela de Funcionario caso seja funcionario
+            MenuFuncionario Funcionario = new MenuFuncionario();
+            Funcionario.ShowDialog();
+
+            //Voltar para tela de Administrador caso seja Administrador
+            MenuAdministrador Administrador = new MenuAdministrador();
+            Administrador.ShowDialog();
+        }
     }
 }

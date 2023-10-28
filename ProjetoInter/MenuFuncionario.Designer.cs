@@ -30,8 +30,8 @@
         {
             this.lblMenuFuncionario = new System.Windows.Forms.Label();
             this.btnPedidoFuncionario = new System.Windows.Forms.Button();
-            this.btnCardápioFuncionario = new System.Windows.Forms.Button();
             this.btnLogoutFuncionario = new System.Windows.Forms.Button();
+            this.btnEstoqueFunc = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblMenuFuncionario
@@ -50,24 +50,13 @@
             this.btnPedidoFuncionario.BackColor = System.Drawing.Color.DarkOrange;
             this.btnPedidoFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPedidoFuncionario.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPedidoFuncionario.Location = new System.Drawing.Point(129, 208);
+            this.btnPedidoFuncionario.Location = new System.Drawing.Point(147, 196);
             this.btnPedidoFuncionario.Name = "btnPedidoFuncionario";
             this.btnPedidoFuncionario.Size = new System.Drawing.Size(149, 82);
             this.btnPedidoFuncionario.TabIndex = 1;
             this.btnPedidoFuncionario.Text = "PEDIDO";
             this.btnPedidoFuncionario.UseVisualStyleBackColor = false;
-            // 
-            // btnCardápioFuncionario
-            // 
-            this.btnCardápioFuncionario.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnCardápioFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCardápioFuncionario.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCardápioFuncionario.Location = new System.Drawing.Point(522, 208);
-            this.btnCardápioFuncionario.Name = "btnCardápioFuncionario";
-            this.btnCardápioFuncionario.Size = new System.Drawing.Size(149, 82);
-            this.btnCardápioFuncionario.TabIndex = 2;
-            this.btnCardápioFuncionario.Text = "CARDÁPIO";
-            this.btnCardápioFuncionario.UseVisualStyleBackColor = false;
+            this.btnPedidoFuncionario.Click += new System.EventHandler(this.btnPedidoFuncionario_Click);
             // 
             // btnLogoutFuncionario
             // 
@@ -81,6 +70,20 @@
             this.btnLogoutFuncionario.TabIndex = 3;
             this.btnLogoutFuncionario.Text = "LOGOUT";
             this.btnLogoutFuncionario.UseVisualStyleBackColor = false;
+            this.btnLogoutFuncionario.Click += new System.EventHandler(this.btnLogoutFuncionario_Click);
+            // 
+            // btnEstoqueFunc
+            // 
+            this.btnEstoqueFunc.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnEstoqueFunc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEstoqueFunc.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstoqueFunc.Location = new System.Drawing.Point(511, 196);
+            this.btnEstoqueFunc.Name = "btnEstoqueFunc";
+            this.btnEstoqueFunc.Size = new System.Drawing.Size(149, 82);
+            this.btnEstoqueFunc.TabIndex = 4;
+            this.btnEstoqueFunc.Text = "ESTOQUE";
+            this.btnEstoqueFunc.UseVisualStyleBackColor = false;
+            this.btnEstoqueFunc.Click += new System.EventHandler(this.btnEstoqueFunc_Click);
             // 
             // MenuFuncionario
             // 
@@ -88,8 +91,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 532);
+            this.Controls.Add(this.btnEstoqueFunc);
             this.Controls.Add(this.btnLogoutFuncionario);
-            this.Controls.Add(this.btnCardápioFuncionario);
             this.Controls.Add(this.btnPedidoFuncionario);
             this.Controls.Add(this.lblMenuFuncionario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -104,7 +107,7 @@
 
         private System.Windows.Forms.Label lblMenuFuncionario;
         private System.Windows.Forms.Button btnPedidoFuncionario;
-        private System.Windows.Forms.Button btnCardápioFuncionario;
         private System.Windows.Forms.Button btnLogoutFuncionario;
+        private System.Windows.Forms.Button btnEstoqueFunc;
     }
 }

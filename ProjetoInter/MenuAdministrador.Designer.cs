@@ -32,7 +32,6 @@
             this.btnCadastroAdmin = new System.Windows.Forms.Button();
             this.btnEstoqueAdmin = new System.Windows.Forms.Button();
             this.btnPedidosAdmin = new System.Windows.Forms.Button();
-            this.btnCaixaAdmin = new System.Windows.Forms.Button();
             this.btnLogoutAdmin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -53,48 +52,39 @@
             this.btnCadastroAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastroAdmin.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastroAdmin.ForeColor = System.Drawing.Color.Black;
-            this.btnCadastroAdmin.Location = new System.Drawing.Point(157, 110);
+            this.btnCadastroAdmin.Location = new System.Drawing.Point(151, 185);
             this.btnCadastroAdmin.Name = "btnCadastroAdmin";
             this.btnCadastroAdmin.Size = new System.Drawing.Size(129, 64);
             this.btnCadastroAdmin.TabIndex = 1;
             this.btnCadastroAdmin.Text = "CADASTRO";
             this.btnCadastroAdmin.UseVisualStyleBackColor = false;
+            this.btnCadastroAdmin.Click += new System.EventHandler(this.btnCadastroAdmin_Click);
             // 
             // btnEstoqueAdmin
             // 
             this.btnEstoqueAdmin.BackColor = System.Drawing.Color.DarkOrange;
             this.btnEstoqueAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEstoqueAdmin.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstoqueAdmin.Location = new System.Drawing.Point(515, 110);
+            this.btnEstoqueAdmin.Location = new System.Drawing.Point(537, 185);
             this.btnEstoqueAdmin.Name = "btnEstoqueAdmin";
             this.btnEstoqueAdmin.Size = new System.Drawing.Size(129, 64);
             this.btnEstoqueAdmin.TabIndex = 2;
             this.btnEstoqueAdmin.Text = "ESTOQUE";
             this.btnEstoqueAdmin.UseVisualStyleBackColor = false;
+            this.btnEstoqueAdmin.Click += new System.EventHandler(this.btnEstoqueAdmin_Click);
             // 
             // btnPedidosAdmin
             // 
             this.btnPedidosAdmin.BackColor = System.Drawing.Color.DarkOrange;
             this.btnPedidosAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPedidosAdmin.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold);
-            this.btnPedidosAdmin.Location = new System.Drawing.Point(157, 242);
+            this.btnPedidosAdmin.Location = new System.Drawing.Point(331, 185);
             this.btnPedidosAdmin.Name = "btnPedidosAdmin";
             this.btnPedidosAdmin.Size = new System.Drawing.Size(129, 64);
             this.btnPedidosAdmin.TabIndex = 3;
             this.btnPedidosAdmin.Text = "PEDIDOS";
             this.btnPedidosAdmin.UseVisualStyleBackColor = false;
-            // 
-            // btnCaixaAdmin
-            // 
-            this.btnCaixaAdmin.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnCaixaAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCaixaAdmin.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCaixaAdmin.Location = new System.Drawing.Point(515, 242);
-            this.btnCaixaAdmin.Name = "btnCaixaAdmin";
-            this.btnCaixaAdmin.Size = new System.Drawing.Size(129, 64);
-            this.btnCaixaAdmin.TabIndex = 4;
-            this.btnCaixaAdmin.Text = "CAIXA";
-            this.btnCaixaAdmin.UseVisualStyleBackColor = false;
+            this.btnPedidosAdmin.Click += new System.EventHandler(this.btnPedidosAdmin_Click);
             // 
             // btnLogoutAdmin
             // 
@@ -108,6 +98,7 @@
             this.btnLogoutAdmin.TabIndex = 5;
             this.btnLogoutAdmin.Text = "LOGOUT";
             this.btnLogoutAdmin.UseVisualStyleBackColor = false;
+            this.btnLogoutAdmin.Click += new System.EventHandler(this.btnLogoutAdmin_Click);
             // 
             // MenuAdministrador
             // 
@@ -116,7 +107,6 @@
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 532);
             this.Controls.Add(this.btnLogoutAdmin);
-            this.Controls.Add(this.btnCaixaAdmin);
             this.Controls.Add(this.btnPedidosAdmin);
             this.Controls.Add(this.btnEstoqueAdmin);
             this.Controls.Add(this.btnCadastroAdmin);
@@ -135,7 +125,6 @@
         private System.Windows.Forms.Button btnCadastroAdmin;
         private System.Windows.Forms.Button btnEstoqueAdmin;
         private System.Windows.Forms.Button btnPedidosAdmin;
-        private System.Windows.Forms.Button btnCaixaAdmin;
         private System.Windows.Forms.Button btnLogoutAdmin;
     }
 }
