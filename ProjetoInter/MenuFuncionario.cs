@@ -22,7 +22,7 @@ namespace ProjetoInter
         {
             //Acesso a tela de Pedidos como Funcionario
             frmPedido PedidoFuncionario = new frmPedido();
-            this.Hide();
+            this.Dispose();
             PedidoFuncionario.ShowDialog();
         }
 
@@ -30,7 +30,7 @@ namespace ProjetoInter
         {
             //Acesso a tela de Estoque como Funcionario
             frmEstoque EstoqueFuncionario = new frmEstoque();
-            this.Hide();
+            this.Dispose();
             EstoqueFuncionario.ShowDialog();
         }
 
@@ -38,7 +38,7 @@ namespace ProjetoInter
         {
             //Volta para a tela de login
             frmLogin Login = new frmLogin();
-            this.Hide();
+            this.Dispose();
             Login.ShowDialog();
         }
     }

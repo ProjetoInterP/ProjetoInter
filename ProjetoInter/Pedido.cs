@@ -21,12 +21,12 @@ namespace ProjetoInter
         {
             //Volta para tela de Menu do Funcionário
             frmMenuFuncionario pedidoFunc = new frmMenuFuncionario();
-            this.Hide();
+            this.Dispose();
             pedidoFunc.Show();
 
             //Volta para tela de Menu do Administrador
             frmMenuAdministrador pedidoAdmin = new frmMenuAdministrador();
-            this.Hide();
+            this.Dispose();
             pedidoAdmin.Show();
         }
     }

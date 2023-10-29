@@ -48,8 +48,10 @@
             this.txtconfirmaSenha = new System.Windows.Forms.TextBox();
             this.lblconfirmaSenha = new System.Windows.Forms.Label();
             this.picVoltarCadastro = new System.Windows.Forms.PictureBox();
+            this.picProcurarFuncionario = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCadastro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVoltarCadastro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picProcurarFuncionario)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNome
@@ -108,16 +110,16 @@
             // 
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtNome.Location = new System.Drawing.Point(227, 110);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(444, 26);
+            this.txtNome.Size = new System.Drawing.Size(426, 26);
             this.txtNome.TabIndex = 4;
             // 
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtUsuario.Location = new System.Drawing.Point(227, 188);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(208, 26);
             this.txtUsuario.TabIndex = 5;
@@ -126,7 +128,7 @@
             // 
             this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtSenha.Location = new System.Drawing.Point(452, 188);
-            this.txtSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSenha.Margin = new System.Windows.Forms.Padding(4);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(201, 26);
             this.txtSenha.TabIndex = 6;
@@ -139,7 +141,7 @@
             "Administrador",
             "Funcionário"});
             this.cmbAcesso.Location = new System.Drawing.Point(227, 348);
-            this.cmbAcesso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbAcesso.Margin = new System.Windows.Forms.Padding(4);
             this.cmbAcesso.Name = "cmbAcesso";
             this.cmbAcesso.Size = new System.Drawing.Size(427, 28);
             this.cmbAcesso.TabIndex = 7;
@@ -159,33 +161,33 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(150)))), ((int)(((byte)(11)))));
+            this.btnEditar.BackColor = System.Drawing.Color.Goldenrod;
             this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(150)))), ((int)(((byte)(11)))));
             this.btnEditar.FlatAppearance.BorderSize = 0;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Arial", 9.75F);
             this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(253)))));
-            this.btnEditar.Location = new System.Drawing.Point(387, 610);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditar.Location = new System.Drawing.Point(378, 601);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(120, 28);
+            this.btnEditar.Size = new System.Drawing.Size(129, 41);
             this.btnEditar.TabIndex = 10;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
             // 
             // btnRemover
             // 
-            this.btnRemover.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(23)))), ((int)(((byte)(22)))));
+            this.btnRemover.BackColor = System.Drawing.Color.Red;
             this.btnRemover.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemover.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(23)))), ((int)(((byte)(22)))));
             this.btnRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemover.Font = new System.Drawing.Font("Arial", 9.75F);
             this.btnRemover.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(253)))));
-            this.btnRemover.Location = new System.Drawing.Point(547, 610);
-            this.btnRemover.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRemover.Location = new System.Drawing.Point(536, 601);
+            this.btnRemover.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(116, 28);
+            this.btnRemover.Size = new System.Drawing.Size(129, 41);
             this.btnRemover.TabIndex = 11;
             this.btnRemover.Text = "Remover";
             this.btnRemover.UseVisualStyleBackColor = false;
@@ -218,7 +220,7 @@
             this.dgvCadastro.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCadastro.EnableHeadersVisualStyles = false;
             this.dgvCadastro.Location = new System.Drawing.Point(227, 457);
-            this.dgvCadastro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvCadastro.Margin = new System.Windows.Forms.Padding(4);
             this.dgvCadastro.MultiSelect = false;
             this.dgvCadastro.Name = "dgvCadastro";
             this.dgvCadastro.ReadOnly = true;
@@ -232,24 +234,24 @@
             // 
             this.txtPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtPesquisa.Location = new System.Drawing.Point(227, 416);
-            this.txtPesquisa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPesquisa.Margin = new System.Windows.Forms.Padding(4);
             this.txtPesquisa.Name = "txtPesquisa";
-            this.txtPesquisa.Size = new System.Drawing.Size(427, 26);
+            this.txtPesquisa.Size = new System.Drawing.Size(314, 26);
             this.txtPesquisa.TabIndex = 16;
             // 
             // btnAdicionar
             // 
-            this.btnAdicionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(171)))), ((int)(((byte)(5)))));
+            this.btnAdicionar.BackColor = System.Drawing.Color.Green;
             this.btnAdicionar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdicionar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(171)))), ((int)(((byte)(5)))));
             this.btnAdicionar.FlatAppearance.BorderSize = 0;
             this.btnAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdicionar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdicionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(253)))));
-            this.btnAdicionar.Location = new System.Drawing.Point(231, 610);
-            this.btnAdicionar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdicionar.Location = new System.Drawing.Point(220, 601);
+            this.btnAdicionar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdicionar.Name = "btnAdicionar";
-            this.btnAdicionar.Size = new System.Drawing.Size(116, 28);
+            this.btnAdicionar.Size = new System.Drawing.Size(129, 41);
             this.btnAdicionar.TabIndex = 18;
             this.btnAdicionar.Text = "Adicionar";
             this.btnAdicionar.UseVisualStyleBackColor = false;
@@ -259,7 +261,7 @@
             // 
             this.txtconfirmaSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtconfirmaSenha.Location = new System.Drawing.Point(233, 266);
-            this.txtconfirmaSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtconfirmaSenha.Margin = new System.Windows.Forms.Padding(4);
             this.txtconfirmaSenha.Name = "txtconfirmaSenha";
             this.txtconfirmaSenha.Size = new System.Drawing.Size(420, 26);
             this.txtconfirmaSenha.TabIndex = 20;
@@ -291,6 +293,15 @@
             this.picVoltarCadastro.TabStop = false;
             this.picVoltarCadastro.Click += new System.EventHandler(this.picVoltarCadastro_Click);
             // 
+            // picProcurarFuncionario
+            // 
+            this.picProcurarFuncionario.Image = global::ProjetoInter.Properties.Resources.procurar__1_;
+            this.picProcurarFuncionario.Location = new System.Drawing.Point(554, 400);
+            this.picProcurarFuncionario.Name = "picProcurarFuncionario";
+            this.picProcurarFuncionario.Size = new System.Drawing.Size(50, 50);
+            this.picProcurarFuncionario.TabIndex = 33;
+            this.picProcurarFuncionario.TabStop = false;
+            // 
             // frmCadFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -298,6 +309,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(895, 674);
+            this.Controls.Add(this.picProcurarFuncionario);
             this.Controls.Add(this.picVoltarCadastro);
             this.Controls.Add(this.txtconfirmaSenha);
             this.Controls.Add(this.lblconfirmaSenha);
@@ -316,12 +328,13 @@
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.lblNome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCadFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Funcionario";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCadastro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVoltarCadastro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picProcurarFuncionario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -346,5 +359,6 @@
         private System.Windows.Forms.TextBox txtconfirmaSenha;
         private System.Windows.Forms.Label lblconfirmaSenha;
         private System.Windows.Forms.PictureBox picVoltarCadastro;
+        private System.Windows.Forms.PictureBox picProcurarFuncionario;
     }
 }

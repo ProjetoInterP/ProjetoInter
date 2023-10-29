@@ -22,7 +22,7 @@ namespace ProjetoInter
         {
             //Acesso a tela de Cadastro como Administrador
             frmCadFuncionario CadFuncionario = new frmCadFuncionario();
-            this.Hide();
+            this.Dispose();
             CadFuncionario.ShowDialog();
         }
 
@@ -30,7 +30,7 @@ namespace ProjetoInter
         {
             //Acesso a tela de Estoque como Administrador
             frmEstoque EstoqueAdmin = new frmEstoque();
-            this.Hide();
+            this.Dispose();
             EstoqueAdmin.ShowDialog();
         }
 
@@ -38,7 +38,7 @@ namespace ProjetoInter
         {
             //Acesso a tela de Pedidos como Administrador
             frmPedido PedidoAdmin = new frmPedido();
-            this.Hide();
+            this.Dispose();
             PedidoAdmin.ShowDialog();
         }
 
@@ -49,5 +49,7 @@ namespace ProjetoInter
             this.Hide();
             Login.ShowDialog();
         }
+
+        
     }
 }

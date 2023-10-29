@@ -31,12 +31,12 @@ namespace ProjetoInter
 
             //Voltar para tela de Funcionario caso seja funcionario
             frmMenuFuncionario Funcionario = new frmMenuFuncionario();
-            this.Hide();
+            this.Dispose();
             Funcionario.ShowDialog();
 
             //Voltar para tela de Administrador caso seja Administrador
             frmMenuAdministrador Administrador = new frmMenuAdministrador();
-            this.Hide();
+            this.Dispose();
             Administrador.ShowDialog();
 
         }

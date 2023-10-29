@@ -61,17 +61,11 @@ namespace ProjetoInter
 
             if (cargoSelecionado == "Administrador")
             {
-
-                frmMenuAdministrador menuAdmin = new frmMenuAdministrador();
-                this.Hide();
-                menuAdmin.ShowDialog();
+                abrirMenuAdministrador();
             }
             else if (cargoSelecionado == "Funcionário")
             {
-                frmMenuFuncionario menuFunc = new frmMenuFuncionario();
-                this.Hide();
-                menuFunc.ShowDialog();
-
+                abrirMenuFuncionario();
             }
             else
             {
@@ -80,6 +74,20 @@ namespace ProjetoInter
             }
 
 
+        }
+
+        private void abrirMenuAdministrador()
+        {
+            frmMenuAdministrador menuAdmin = new frmMenuAdministrador();
+            this.Dispose();
+            menuAdmin.ShowDialog();
+        }
+
+        private void abrirMenuFuncionario()
+        {
+            frmMenuFuncionario menuFunc = new frmMenuFuncionario();
+            this.Dispose();
+            menuFunc.ShowDialog();
         }
 
         private void picEncerar_Click(object sender, EventArgs e)
