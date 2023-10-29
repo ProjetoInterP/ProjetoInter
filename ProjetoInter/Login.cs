@@ -32,63 +32,65 @@ namespace ProjetoInter
         {
             string login = txtLogin.Text;
             string senha = txtSenha.Text;
-            string cargoSelecionado = cmbFuncao.SelectedItem.ToString();
+            string cargoSelecionado = cmbFuncao.SelectedItem?.ToString();
 
-
-
-            //criando a instancia do banco de dados
-            PizzariaDB db = new PizzariaDB();
-
-            Usuario user = db.Usuarios.FirstOrDefault(x => x.Login == login);
-
-
-
-            if (user != null)
+            // Caractere coringa para login durante o desenvolvimento
+            if (login == "admin" && senha == "admin123")
             {
-                if (user.Senha == senha)
-                {
-                    if (cargoSelecionado == "Administrador")
-                    {
-                        abrirMenuAdministrador();
-                    }
-                    else if (cargoSelecionado == "Funcionário")
-                    {
-                        abrirMenuFuncionario();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Nenhum tipo de acesso selecionado,tente novamente", " "
-                        , MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Senha Inválida", " ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                RedirecionarUsuario(cargoSelecionado);
             }
             else
             {
-                MessageBox.Show("Usuário não encontrado");
+                // Código de autenticação normal com o banco de dados
+                PizzariaDB db = new PizzariaDB();
+                Usuario user = db.Usuarios.FirstOrDefault(x => x.Login == login && x.Senha == senha);
+
+                if (user != null)
+                {
+                    RedirecionarUsuario(cargoSelecionado);
+                }
+                else
+                {
+                    MessageBox.Show("Usuário ou senha inválidos", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
 
-        private void abrirMenuAdministrador()
+        private void RedirecionarUsuario(string cargo)
         {
-            frmMenuAdministrador menuAdmin = new frmMenuAdministrador();
-            this.Dispose();
-            menuAdmin.ShowDialog();
+            if (cargo == "Administrador")
+            {
+                AbrirMenuAdministrador();
+            }
+            else if (cargo == "Funcionário")
+            {
+                AbrirMenuFuncionario();
+            }
+            else
+            {
+                MessageBox.Show("Nenhum tipo de acesso selecionado, tente novamente", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
-        private void abrirMenuFuncionario()
+        private void AbrirMenuAdministrador()
+        {
+            frmMenuAdministrador menuAdmin = new frmMenuAdministrador();
+            this.Hide();
+            menuAdmin.ShowDialog();
+            this.Close();
+        }
+
+        private void AbrirMenuFuncionario()
         {
             frmMenuFuncionario menuFunc = new frmMenuFuncionario();
-            this.Dispose();
+            this.Hide();
             menuFunc.ShowDialog();
+            this.Close();
         }
 
         private void picEncerar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
     }
 }

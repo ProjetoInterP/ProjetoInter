@@ -250,7 +250,6 @@
             this.txtconfirmaSenha.Name = "txtconfirmaSenha";
             this.txtconfirmaSenha.Size = new System.Drawing.Size(316, 22);
             this.txtconfirmaSenha.TabIndex = 20;
-            this.txtconfirmaSenha.TextChanged += new System.EventHandler(this.txtconfirmaSenha_TextChanged);
             // 
             // lblconfirmaSenha
             // 
@@ -316,7 +315,6 @@
             this.Name = "frmCadFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Funcionario";
-            this.Load += new System.EventHandler(this.frmCadFuncionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCadastro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVoltarCadastro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProcurarFuncionario)).EndInit();

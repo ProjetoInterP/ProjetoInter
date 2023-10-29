@@ -64,26 +64,9 @@ namespace ProjetoInter
 
         private void picVoltarCadastro_Click(object sender, EventArgs e)
         {
-
-            //Voltar para tela de Funcionario caso seja funcionario
-            frmMenuFuncionario Funcionario = new frmMenuFuncionario();
-            this.Dispose();
-            Funcionario.ShowDialog();
-
-            //Voltar para tela de Administrador caso seja Administrador
             frmMenuAdministrador Administrador = new frmMenuAdministrador();
             this.Dispose();
             Administrador.ShowDialog();
-        }
-
-        private void txtconfirmaSenha_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmCadFuncionario_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

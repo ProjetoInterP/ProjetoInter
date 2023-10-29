@@ -19,7 +19,7 @@ namespace ProjetoInter.DB
         {
             if (!options.IsConfigured)
             {
-                var stringConexao = "Server=localhost;Database=projetopizzaria;User=root;Password=123";
+                var stringConexao = "Server=localhost;Database=projetopizzaria;User=root;Password=182830";
                 options.UseMySql(stringConexao);
             }
         }

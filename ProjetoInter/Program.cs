@@ -16,7 +16,7 @@ namespace ProjetoInter
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCadFuncionario());
+            Application.Run(new  frmLogin());
         }
     }
 }
