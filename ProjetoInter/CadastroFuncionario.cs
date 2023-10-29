@@ -24,11 +24,23 @@ namespace ProjetoInter
 
         private void btnRemover_Click(object sender, EventArgs e)
         {
-            txtNome.Text = string.Empty;
-            txtUsuario.Text = string.Empty;
-            txtSenha.Text = string.Empty;
-            cmbAcesso.Text = string.Empty;
-            txtPesquisa.Text = string.Empty;
+            string nomeCadastro = txtNome.Text;
+
+            PizzariaDB _context = new PizzariaDB();
+            Usuario usuario = _context.Usuarios.FirstOrDefault(x => x.Nome == nomeCadastro);
+
+            if (usuario != null)
+            {
+                //Remove usuario inserido
+                _context.Usuarios.Remove(usuario);
+                MessageBox.Show("Usuario removido com sucesso", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            else
+            {
+                //Mensagem de Erro
+                MessageBox.Show("Usuário não encontrado ou já excluido","",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
         }
         private async void btnAdicionar_Click_1(object sender, EventArgs e)
@@ -67,6 +79,35 @@ namespace ProjetoInter
             frmMenuAdministrador Administrador = new frmMenuAdministrador();
             this.Dispose();
             Administrador.ShowDialog();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            string cargoSelecionado = cmbAcesso.SelectedItem?.ToString();
+            string nomeCadastro = txtNome.Text;
+
+            PizzariaDB _context = new PizzariaDB();
+            Usuario usuario = _context.Usuarios.FirstOrDefault(x => x.Nome == nomeCadastro);
+
+            if (usuario != null)
+            {
+                usuario.Cargo = cmbAcesso.Text;
+                usuario.Senha = txtSenha.Text;
+
+                _context.Update(usuario);
+
+                _context.SaveChanges();
+
+                //Exibe Mensagem de Sucesso
+                MessageBox.Show("Alteração feita com sucesso", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+            }
+            else
+            {
+                //Caso não encontra o produto solicitado
+                MessageBox.Show("Usuário não encontrado", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

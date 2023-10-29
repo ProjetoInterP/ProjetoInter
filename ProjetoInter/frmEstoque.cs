@@ -43,16 +43,53 @@ namespace ProjetoInter
 
         private void btnRemover_Click(object sender, EventArgs e)
         {
+            string nomeProduto = txtNomeProduto.Text;
 
-            txtNomeProduto.Text = string.Empty;
-            txtDescricaoProd.Text = string.Empty;
-            txtCategoriaEstoque.Text = string.Empty;
-            txtQuantidadeEstoque.Text = string.Empty;
-            txtProcurarProd.Text = string.Empty;
+            PizzariaDB _context = new PizzariaDB();
+            Estoque estoque = _context.Estoque.FirstOrDefault(x => x.NomeProduto == nomeProduto);
+
+            if (estoque != null)
+            {
+                //Remove produto inserido
+                _context.Estoque.Remove(estoque);
+                MessageBox.Show("Produto removido com sucesso", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                //Caso produto não exista
+                MessageBox.Show("Produto não encontrado ou não existe", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
+            string nomeProduto = txtNomeProduto.Text;
+
+            PizzariaDB _context = new PizzariaDB();
+            Estoque estoque = _context.Estoque.FirstOrDefault(x => x.NomeProduto == nomeProduto);
+
+            if (estoque != null)
+            {
+                estoque.DescricaoProduto = txtDescricaoProd.Text;
+                estoque.QuantidadeProduto = int.Parse(txtQuantidadeEstoque.Text);
+                estoque.CategoriaProduto = txtCategoriaEstoque.Text;
+
+                _context.SaveChanges();
+
+                //Exibe Mensagem de Sucesso
+                MessageBox.Show("Alteração feita com sucesso", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+            }
+            else
+            {
+                //Caso não encontra o produto solicitado
+                MessageBox.Show("Produto não encontrado", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
 
         }
 
