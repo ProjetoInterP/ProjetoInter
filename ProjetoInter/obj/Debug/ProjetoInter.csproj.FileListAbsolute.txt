@@ -375,3 +375,5 @@ C:\Users\Tiago TG\Desktop\ProjetoInter\ProjetoInter\obj\Debug\ProjetoInter.cspro
 C:\Users\Tiago TG\Desktop\ProjetoInter\ProjetoInter\obj\Debug\ProjetoInter.csproj.CopyComplete
 C:\Users\Tiago TG\Desktop\ProjetoInter\ProjetoInter\obj\Debug\ProjetoInter.exe
 C:\Users\Tiago TG\Desktop\ProjetoInter\ProjetoInter\obj\Debug\ProjetoInter.pdb
+C:\Users\Caiaque\Desktop\ProjetoInteratt\ProjetoInter\ProjetoInter\obj\Debug\ProjetoInter.frmMenuAdministrador.resources
+C:\Users\Caiaque\Desktop\ProjetoInteratt\ProjetoInter\ProjetoInter\obj\Debug\ProjetoInter.frmMenuFuncionario.resources

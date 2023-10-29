@@ -47,7 +47,19 @@ namespace ProjetoInter
             {
                 if (user.Senha == senha)
                 {
-                    //redireciona para a pagina correta(home)
+                    if (cargoSelecionado == "Administrador")
+                    {
+                        abrirMenuAdministrador();
+                    }
+                    else if (cargoSelecionado == "Funcionário")
+                    {
+                        abrirMenuFuncionario();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nenhum tipo de acesso selecionado,tente novamente", " "
+                        , MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
                 else
                 {
@@ -58,22 +70,6 @@ namespace ProjetoInter
             {
                 MessageBox.Show("Usuário não encontrado");
             }
-
-            if (cargoSelecionado == "Administrador")
-            {
-                abrirMenuAdministrador();
-            }
-            else if (cargoSelecionado == "Funcionário")
-            {
-                abrirMenuFuncionario();
-            }
-            else
-            {
-                MessageBox.Show("Nenhum tipo de acesso selecionado,tente novamente", " "
-                , MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-
         }
 
         private void abrirMenuAdministrador()
