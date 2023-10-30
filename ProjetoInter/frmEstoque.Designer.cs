@@ -42,11 +42,13 @@
             this.lblNomeProduto = new System.Windows.Forms.Label();
             this.txtCategoriaEstoque = new System.Windows.Forms.TextBox();
             this.txtQuantidadeEstoque = new System.Windows.Forms.TextBox();
-            this.lstProduto = new System.Windows.Forms.ListView();
             this.picBuscarEstoque = new System.Windows.Forms.PictureBox();
             this.picVoltarEstoque = new System.Windows.Forms.PictureBox();
+            this.dgvEstoque = new System.Windows.Forms.DataGridView();
+            this.btnLimpaTexto = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picBuscarEstoque)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVoltarEstoque)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstoque)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAlterar
@@ -194,16 +196,6 @@
             this.txtQuantidadeEstoque.Size = new System.Drawing.Size(171, 22);
             this.txtQuantidadeEstoque.TabIndex = 33;
             // 
-            // lstProduto
-            // 
-            this.lstProduto.HideSelection = false;
-            this.lstProduto.Location = new System.Drawing.Point(191, 272);
-            this.lstProduto.Margin = new System.Windows.Forms.Padding(4);
-            this.lstProduto.Name = "lstProduto";
-            this.lstProduto.Size = new System.Drawing.Size(411, 122);
-            this.lstProduto.TabIndex = 34;
-            this.lstProduto.UseCompatibleStateImageBehavior = false;
-            // 
             // picBuscarEstoque
             // 
             this.picBuscarEstoque.Image = global::ProjetoInter.Properties.Resources.procurar__1_;
@@ -227,14 +219,42 @@
             this.picVoltarEstoque.TabStop = false;
             this.picVoltarEstoque.Click += new System.EventHandler(this.picVoltarEstoque_Click);
             // 
+            // dgvEstoque
+            // 
+            this.dgvEstoque.BackgroundColor = System.Drawing.Color.White;
+            this.dgvEstoque.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEstoque.Location = new System.Drawing.Point(189, 256);
+            this.dgvEstoque.Name = "dgvEstoque";
+            this.dgvEstoque.RowHeadersWidth = 51;
+            this.dgvEstoque.RowTemplate.Height = 24;
+            this.dgvEstoque.Size = new System.Drawing.Size(411, 140);
+            this.dgvEstoque.TabIndex = 36;
+            this.dgvEstoque.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstoque_CellClick);
+            this.dgvEstoque.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvEstoque_CellFormatting_1);
+            // 
+            // btnLimpaTexto
+            // 
+            this.btnLimpaTexto.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnLimpaTexto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpaTexto.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpaTexto.ForeColor = System.Drawing.Color.White;
+            this.btnLimpaTexto.Location = new System.Drawing.Point(527, 6);
+            this.btnLimpaTexto.Name = "btnLimpaTexto";
+            this.btnLimpaTexto.Size = new System.Drawing.Size(75, 35);
+            this.btnLimpaTexto.TabIndex = 37;
+            this.btnLimpaTexto.Text = "Limpar";
+            this.btnLimpaTexto.UseVisualStyleBackColor = false;
+            this.btnLimpaTexto.Click += new System.EventHandler(this.btnLimpaTexto_Click);
+            // 
             // frmEstoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(859, 526);
+            this.Controls.Add(this.btnLimpaTexto);
+            this.Controls.Add(this.dgvEstoque);
             this.Controls.Add(this.picBuscarEstoque);
-            this.Controls.Add(this.lstProduto);
             this.Controls.Add(this.txtQuantidadeEstoque);
             this.Controls.Add(this.txtCategoriaEstoque);
             this.Controls.Add(this.picVoltarEstoque);
@@ -256,6 +276,7 @@
             this.Text = "Estoque";
             ((System.ComponentModel.ISupportInitialize)(this.picBuscarEstoque)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVoltarEstoque)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstoque)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,7 +298,8 @@
         private System.Windows.Forms.PictureBox picVoltarEstoque;
         private System.Windows.Forms.TextBox txtCategoriaEstoque;
         private System.Windows.Forms.TextBox txtQuantidadeEstoque;
-        private System.Windows.Forms.ListView lstProduto;
         private System.Windows.Forms.PictureBox picBuscarEstoque;
+        private System.Windows.Forms.DataGridView dgvEstoque;
+        private System.Windows.Forms.Button btnLimpaTexto;
     }
 }

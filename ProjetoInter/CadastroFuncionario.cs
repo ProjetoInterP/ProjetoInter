@@ -33,6 +33,10 @@ namespace ProjetoInter
             {
                 //Remove usuario inserido
                 _context.Usuarios.Remove(usuario);
+                _context.SaveChanges();
+
+                dgvFuncionarios.DataSource = _context.Usuarios.ToList();
+                LimparCamposTexto();
                 MessageBox.Show("Usuario removido com sucesso", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
@@ -222,6 +226,12 @@ namespace ProjetoInter
                 }
                 // Você pode adicionar mais condições conforme necessário
             }
+        }
+
+        private void btnLimpaTexto_Click(object sender, EventArgs e)
+        {
+            LimparCamposTexto();
+
         }
     }
 }
