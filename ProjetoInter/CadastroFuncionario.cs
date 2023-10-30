@@ -50,7 +50,7 @@ namespace ProjetoInter
             string txt_nome = txtNome.Text;
             string txt_usuario = txtUsuario.Text;
             string txt_senha = txtSenha.Text;
-            string txt_confirm_senha = txtconfirmaSenha.Text;
+            string txt_confirm_senha = txtConfirmarSenha.Text;
             string txt_cargo = cmbAcesso.Text;
 
             if(txt_senha == txt_confirm_senha)
@@ -68,12 +68,23 @@ namespace ProjetoInter
 
                 // comando para salvar as alterações no banco de dados
                 _context.SaveChangesAsync();
+
+                // Limpar os campos de texto após o cadastro bem-sucedido
+                LimparCamposTexto();
             } else
             {
                 MessageBox.Show("Senhas diferentes", " ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
+        private void LimparCamposTexto()
+        {
+            txtNome.Text = "";
+            txtUsuario.Text = "";
+            txtSenha.Text = "";
+            txtConfirmarSenha.Text = "";
+            cmbAcesso.SelectedIndex = -1; // Limpa a seleção do ComboBox
+        }
         private void picVoltarCadastro_Click(object sender, EventArgs e)
         {
             frmMenuAdministrador Administrador = new frmMenuAdministrador();
@@ -107,6 +118,109 @@ namespace ProjetoInter
             {
                 //Caso não encontra o produto solicitado
                 MessageBox.Show("Usuário não encontrado", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void picProcurarFuncionario_Click(object sender, EventArgs e)
+        {
+            string nomeFuncionario = txtNomeFuncionario.Text;
+
+            using (var db = new PizzariaDB())
+            {
+                var funcionarios = db.Usuarios
+                    .Where(u => u.Nome.Contains(nomeFuncionario))
+                    .ToList();
+
+                dgvFuncionarios.DataSource = funcionarios;
+            }
+        }
+
+        private void frmCadFuncionario_Load(object sender, EventArgs e)
+        {
+            using (var db = new PizzariaDB())
+            {
+                var funcionarios = db.Usuarios.ToList(); // Ou qualquer outra consulta que você precise
+
+                dgvFuncionarios.DataSource = funcionarios;
+            }
+        }
+
+        private void dgvFuncionarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) // Certifique-se de que uma linha válida foi clicada
+            {
+                DataGridViewRow row = dgvFuncionarios.Rows[e.RowIndex];
+
+                // Preencha os campos de texto e combobox com os dados da célula clicada
+                txtNome.Text = row.Cells["Nome"].Value.ToString();
+                txtUsuario.Text = row.Cells["Login"].Value.ToString();
+                txtSenha.Text = row.Cells["Senha"].Value.ToString();
+                txtConfirmarSenha.Text = row.Cells["Senha"].Value.ToString(); // Supondo que a senha seja mostrada na célula
+                cmbAcesso.Text = row.Cells["Cargo"].Value.ToString();
+                txtNomeFuncionario.Text = row.Cells["Nome"].Value.ToString();
+                // Preencha outros campos de texto conforme necessário
+            }
+        }
+        private void LimparCampos()
+        {
+            txtNome.Text = "";
+            txtUsuario.Text = "";
+            txtSenha.Text = "";
+            txtConfirmarSenha.Text = "";
+            cmbAcesso.Text = "";
+            // Limpe outros campos de texto conforme necessário
+        }
+        private void txtNomeFuncionario_TextChanged(object sender, EventArgs e)
+        {
+            string nomeFuncionario = txtNomeFuncionario.Text;
+
+            // Faça uma consulta no banco de dados para encontrar o funcionário com o nome fornecido
+            using (var db = new PizzariaDB())
+            {
+                var funcionario = db.Usuarios.FirstOrDefault(u => u.Nome.Contains(nomeFuncionario));
+
+                if (funcionario != null)
+                {
+                    // Preencha os campos de texto e combobox com os dados do funcionário encontrado
+                    txtNome.Text = funcionario.Nome;
+                    txtUsuario.Text = funcionario.Login;
+                    txtSenha.Text = funcionario.Senha;
+                    txtConfirmarSenha.Text = funcionario.Senha; // Supondo que a senha seja mostrada na célula
+                    cmbAcesso.Text = funcionario.Cargo;
+                    // Preencha outros campos de texto conforme necessário
+                }
+                else
+                {
+                    // Se nenhum funcionário foi encontrado, limpe os campos de texto e combobox
+                    LimparCampos();
+                }
+            }
+            
+        }
+
+        private void dgvFuncionarios_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            // Especifique o índice da coluna que deseja alterar a cor
+            int columnIndex = dgvFuncionarios.Columns["Nome"].Index; // Substitua "Nome" pelo nome da sua coluna
+
+            // Verifique se a célula atual está na coluna desejada
+            if (e.ColumnIndex == columnIndex && e.Value != null)
+            {
+                // Verifique o valor da célula e defina a cor com base no valor
+                string valor = e.Value.ToString();
+                if (valor == "Admin")
+                {
+                    // Defina a cor de fundo para a célula com valor "Admin"
+                    e.CellStyle.BackColor = Color.Purple; // Substitua pela cor que deseja
+                    e.CellStyle.ForeColor = Color.White; // Defina a cor do texto para melhor legibilidade
+                }
+                else if (valor == "Funcionário")
+                {
+                    // Defina a cor de fundo para a célula com valor "Funcionário"
+                    e.CellStyle.BackColor = Color.Blue; // Substitua pela cor que deseja
+                    e.CellStyle.ForeColor = Color.White; // Defina a cor do texto para melhor legibilidade
+                }
+                // Você pode adicionar mais condições conforme necessário
             }
         }
     }
