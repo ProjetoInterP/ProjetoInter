@@ -1,6 +1,6 @@
 ﻿namespace ProjetoInter
 {
-    partial class Cadastro_Cliente
+    partial class frmCadastroCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cadastro_Cliente));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroCliente));
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.btnRemover = new System.Windows.Forms.Button();
@@ -43,12 +43,12 @@
             this.lblEndereco = new System.Windows.Forms.Label();
             this.lblTelefone = new System.Windows.Forms.Label();
             this.mskTelefone = new System.Windows.Forms.MaskedTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picCadCliente = new System.Windows.Forms.PictureBox();
             this.picLimpar = new System.Windows.Forms.PictureBox();
             this.picProcurarFuncionario = new System.Windows.Forms.PictureBox();
             this.picVoltarCadastro = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCadCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLimpar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProcurarFuncionario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVoltarCadastro)).BeginInit();
@@ -219,15 +219,15 @@
             this.mskTelefone.TabIndex = 50;
             this.mskTelefone.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             // 
-            // pictureBox1
+            // picCadCliente
             // 
-            this.pictureBox1.Image = global::ProjetoInter.Properties.Resources.eleitor;
-            this.pictureBox1.Location = new System.Drawing.Point(540, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 51;
-            this.pictureBox1.TabStop = false;
+            this.picCadCliente.Image = global::ProjetoInter.Properties.Resources.eleitor;
+            this.picCadCliente.Location = new System.Drawing.Point(540, 12);
+            this.picCadCliente.Name = "picCadCliente";
+            this.picCadCliente.Size = new System.Drawing.Size(100, 100);
+            this.picCadCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCadCliente.TabIndex = 51;
+            this.picCadCliente.TabStop = false;
             // 
             // picLimpar
             // 
@@ -263,13 +263,13 @@
             this.picVoltarCadastro.TabIndex = 41;
             this.picVoltarCadastro.TabStop = false;
             // 
-            // Cadastro_Cliente
+            // frmCadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(652, 609);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picCadCliente);
             this.Controls.Add(this.mskTelefone);
             this.Controls.Add(this.lblTelefone);
             this.Controls.Add(this.lblEndereco);
@@ -286,10 +286,10 @@
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblNome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Cadastro_Cliente";
+            this.Name = "frmCadastroCliente";
             this.Text = "Cadastro_Cliente";
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCadCliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLimpar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProcurarFuncionario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVoltarCadastro)).EndInit();
@@ -315,6 +315,6 @@
         private System.Windows.Forms.Label lblEndereco;
         private System.Windows.Forms.Label lblTelefone;
         private System.Windows.Forms.MaskedTextBox mskTelefone;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picCadCliente;
     }
 }

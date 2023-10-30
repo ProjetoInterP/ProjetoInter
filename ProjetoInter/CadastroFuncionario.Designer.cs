@@ -47,12 +47,12 @@
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.txtConfirmarSenha = new System.Windows.Forms.TextBox();
             this.lblconfirmaSenha = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picCadFuncionario = new System.Windows.Forms.PictureBox();
             this.picLimpar = new System.Windows.Forms.PictureBox();
             this.picProcurarFuncionario = new System.Windows.Forms.PictureBox();
             this.picVoltarCadastro = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionarios)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCadFuncionario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLimpar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProcurarFuncionario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVoltarCadastro)).BeginInit();
@@ -271,15 +271,15 @@
             this.lblconfirmaSenha.TabIndex = 19;
             this.lblconfirmaSenha.Text = "Confirmar senha:";
             // 
-            // pictureBox1
+            // picCadFuncionario
             // 
-            this.pictureBox1.Image = global::ProjetoInter.Properties.Resources.carteira_de_identidade;
-            this.pictureBox1.Location = new System.Drawing.Point(549, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 35;
-            this.pictureBox1.TabStop = false;
+            this.picCadFuncionario.Image = global::ProjetoInter.Properties.Resources.carteira_de_identidade;
+            this.picCadFuncionario.Location = new System.Drawing.Point(549, 12);
+            this.picCadFuncionario.Name = "picCadFuncionario";
+            this.picCadFuncionario.Size = new System.Drawing.Size(100, 100);
+            this.picCadFuncionario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCadFuncionario.TabIndex = 35;
+            this.picCadFuncionario.TabStop = false;
             // 
             // picLimpar
             // 
@@ -324,7 +324,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(671, 609);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picCadFuncionario);
             this.Controls.Add(this.picLimpar);
             this.Controls.Add(this.picProcurarFuncionario);
             this.Controls.Add(this.picVoltarCadastro);
@@ -350,7 +350,7 @@
             this.Text = "Cadastro Funcionario";
             this.Load += new System.EventHandler(this.frmCadFuncionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionarios)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCadFuncionario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLimpar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProcurarFuncionario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVoltarCadastro)).EndInit();
@@ -380,6 +380,6 @@
         private System.Windows.Forms.PictureBox picVoltarCadastro;
         private System.Windows.Forms.PictureBox picProcurarFuncionario;
         private System.Windows.Forms.PictureBox picLimpar;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picCadFuncionario;
     }
 }

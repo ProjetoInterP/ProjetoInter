@@ -41,5 +41,10 @@ namespace ProjetoInter
             this.Dispose();
             Login.ShowDialog();
         }
+
+        private void picCadCliente_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

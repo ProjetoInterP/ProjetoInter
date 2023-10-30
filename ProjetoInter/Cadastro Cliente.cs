@@ -11,9 +11,9 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace ProjetoInter
 {
-    public partial class Cadastro_Cliente : Form
+    public partial class frmCadastroCliente : Form
     {
-        public Cadastro_Cliente()
+        public frmCadastroCliente()
         {
             InitializeComponent();
         }

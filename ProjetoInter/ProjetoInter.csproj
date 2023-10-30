@@ -252,6 +252,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\loginimg.png.png" />
+    <None Include="Resources\cliente.png" />
     <None Include="Resources\eleitor.png" />
     <None Include="Resources\carteira-de-identidade.png" />
     <None Include="Resources\apagar.png" />
