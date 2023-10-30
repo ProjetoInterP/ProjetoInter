@@ -172,6 +172,7 @@ namespace ProjetoInter
             txtSenha.Text = "";
             txtConfirmarSenha.Text = "";
             cmbAcesso.Text = "";
+            txtNome.Focus();
             // Limpe outros campos de texto conforme necessário
         }
         private void txtNomeFuncionario_TextChanged(object sender, EventArgs e)
@@ -228,10 +229,9 @@ namespace ProjetoInter
             }
         }
 
-        private void btnLimpaTexto_Click(object sender, EventArgs e)
+        private void picLimpar_Click(object sender, EventArgs e)
         {
             LimparCamposTexto();
-
         }
     }
 }

@@ -63,6 +63,16 @@ namespace ProjetoInter.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap apagar {
+            get {
+                object obj = ResourceManager.GetObject("apagar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap atendente {
             get {
                 object obj = ResourceManager.GetObject("atendente", resourceCulture);
@@ -83,9 +93,29 @@ namespace ProjetoInter.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap carteira_de_identidade {
+            get {
+                object obj = ResourceManager.GetObject("carteira-de-identidade", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap despensa__1_ {
             get {
                 object obj = ResourceManager.GetObject("despensa (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eleitor {
+            get {
+                object obj = ResourceManager.GetObject("eleitor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

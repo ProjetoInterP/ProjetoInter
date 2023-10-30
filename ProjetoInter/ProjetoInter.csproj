@@ -139,6 +139,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cadastro Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro Cliente.Designer.cs">
+      <DependentUpon>Cadastro Cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="CadastroFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +205,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Cadastro Cliente.resx">
+      <DependentUpon>Cadastro Cliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CadastroFuncionario.resx">
       <DependentUpon>CadastroFuncionario.cs</DependentUpon>
     </EmbeddedResource>
@@ -243,6 +252,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\loginimg.png.png" />
+    <None Include="Resources\eleitor.png" />
+    <None Include="Resources\carteira-de-identidade.png" />
+    <None Include="Resources\apagar.png" />
     <None Include="Resources\procurar %281%29.png" />
     <None Include="Resources\atendente.png" />
     <None Include="Resources\Funcionario.png" />
