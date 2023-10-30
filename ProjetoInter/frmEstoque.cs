@@ -168,10 +168,9 @@ namespace ProjetoInter
             // Limpe outros campos de texto conforme necessário
         }
 
-        private void btnLimpaTexto_Click(object sender, EventArgs e)
+        private void picLimpar_Click(object sender, EventArgs e)
         {
             LimparCampos();
-
         }
     }
 }
