@@ -10,16 +10,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static ProjetoInter.frmLogin;
 
 namespace ProjetoInter
 {
     public partial class frmCadFuncionario : Form
     {
+        private string cargoUsuário;
+        private frmLogin frmLogin;
         public frmCadFuncionario()
         {
             InitializeComponent();
             txtSenha.PasswordChar = '*';
             txtSenha.MaxLength = 10;
+            string cargoUsuario = Global.FuncaoSelecionada;
+            frmLogin = new frmLogin();
         }
 
         private void btnRemover_Click(object sender, EventArgs e)
@@ -91,9 +96,8 @@ namespace ProjetoInter
         }
         private void picVoltarCadastro_Click(object sender, EventArgs e)
         {
-            frmMenuAdministrador Administrador = new frmMenuAdministrador();
             this.Dispose();
-            Administrador.ShowDialog();
+            frmLogin.VoltarAoFormAnterior();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)

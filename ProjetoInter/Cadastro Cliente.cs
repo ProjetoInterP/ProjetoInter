@@ -7,15 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
+using static ProjetoInter.frmLogin;
 
 namespace ProjetoInter
 {
     public partial class frmCadastroCliente : Form
     {
+        private string cargoUsuário;
+        private frmLogin frmLogin;
         public frmCadastroCliente()
         {
             InitializeComponent();
+            string cargoUsuario = Global.FuncaoSelecionada;
+            frmLogin = new frmLogin();
         }
         private void LimparCampos()
         {
@@ -36,6 +40,12 @@ namespace ProjetoInter
             long cel = Convert.ToInt64(mskTelefone.Text);
             string celFormatado = String.Format(@"{(00)\0000-0000}", cel);
             mskTelefone.Text = celFormatado;
+        }
+
+        private void picVoltarCadastro_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            frmLogin.VoltarAoFormAnterior();
         }
     }
 }

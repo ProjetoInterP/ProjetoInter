@@ -181,6 +181,7 @@
             this.picCadCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picCadCliente.TabIndex = 35;
             this.picCadCliente.TabStop = false;
+            this.picCadCliente.Click += new System.EventHandler(this.picCadCliente_Click);
             // 
             // picAdmin
             // 
@@ -268,7 +269,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMenuAdministrador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu do Administrador";

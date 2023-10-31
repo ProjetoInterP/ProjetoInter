@@ -14,6 +14,10 @@ namespace ProjetoInter
 {
     public partial class frmLogin : Form
     {
+        public static class Global
+        {
+            public static string FuncaoSelecionada { get; set; }
+        }
         public frmLogin()
         {
             InitializeComponent();
@@ -58,13 +62,21 @@ namespace ProjetoInter
 
         private void RedirecionarUsuario(string cargo)
         {
+            Global.FuncaoSelecionada = cargo; // Armazena a função selecionada globalmente
+
             if (cargo == "Administrador")
             {
-                AbrirMenuAdministrador();
+                frmMenuAdministrador menuAdmin = new frmMenuAdministrador();
+                this.Hide();
+                menuAdmin.ShowDialog();
+                this.Close();
             }
             else if (cargo == "Funcionário")
             {
-                AbrirMenuFuncionario();
+                frmMenuFuncionario menuFunc = new frmMenuFuncionario();
+                this.Hide();
+                menuFunc.ShowDialog();
+                this.Close();
             }
             else
             {
@@ -72,20 +84,23 @@ namespace ProjetoInter
             }
         }
 
-        private void AbrirMenuAdministrador()
+        public void VoltarAoFormAnterior()
         {
-            frmMenuAdministrador menuAdmin = new frmMenuAdministrador();
-            this.Hide();
-            menuAdmin.ShowDialog();
-            this.Close();
-        }
-
-        private void AbrirMenuFuncionario()
-        {
-            frmMenuFuncionario menuFunc = new frmMenuFuncionario();
-            this.Hide();
-            menuFunc.ShowDialog();
-            this.Close();
+            if (Global.FuncaoSelecionada == "Administrador")
+            {
+                frmMenuAdministrador menuAdmin = new frmMenuAdministrador();
+                this.Hide();
+                menuAdmin.ShowDialog();
+                this.Close();
+            }
+            else if (Global.FuncaoSelecionada == "Funcionário")
+            {
+                frmMenuFuncionario menuFunc = new frmMenuFuncionario();
+                this.Hide();
+                menuFunc.ShowDialog();
+                this.Close();
+            }
+ 
         }
 
         private void picEncerar_Click(object sender, EventArgs e)

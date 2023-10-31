@@ -17,7 +17,7 @@ namespace ProjetoInter.DB
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            if (!options.IsConfigured)
+            if (!options.IsConfigured) 
             {
                 var stringConexao = "Server=localhost;Database=projetopizzaria;User=root;Password=182830";
                 options.UseMySql(stringConexao);

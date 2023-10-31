@@ -262,6 +262,7 @@
             this.picVoltarCadastro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picVoltarCadastro.TabIndex = 41;
             this.picVoltarCadastro.TabStop = false;
+            this.picVoltarCadastro.Click += new System.EventHandler(this.picVoltarCadastro_Click);
             // 
             // frmCadastroCliente
             // 
@@ -287,6 +288,7 @@
             this.Controls.Add(this.lblNome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCadastroCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro_Cliente";
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCadCliente)).EndInit();

@@ -9,35 +9,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static ProjetoInter.frmLogin;
 
 namespace ProjetoInter
 {
     public partial class frmEstoque : Form
     {
+        
         private string cargoUsuário;
+        private frmLogin frmLogin;
         public frmEstoque()
         {
             InitializeComponent();
-
+            //serve para armazenar o que foi selecionado no form de login
+            string cargoUsuario = Global.FuncaoSelecionada;
+            frmLogin = new frmLogin();
+            
         }
 
 
 
         private void picVoltarEstoque_Click(object sender, EventArgs e)
         {
-            //Envia o usuario devolta para sua respectiva tela (Condição if em produção).
-
-
-
-            //Voltar para tela de Funcionario caso seja funcionario
-            frmMenuFuncionario Funcionario = new frmMenuFuncionario();
             this.Dispose();
-            Funcionario.ShowDialog();
-
-            //Voltar para tela de Administrador caso seja Administrador
-            frmMenuAdministrador Administrador = new frmMenuAdministrador();
-            this.Dispose();
-            Administrador.ShowDialog();
+            frmLogin.VoltarAoFormAnterior();
+            
 
         }
 

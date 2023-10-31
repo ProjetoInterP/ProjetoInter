@@ -44,7 +44,10 @@ namespace ProjetoInter
 
         private void picCadCliente_Click(object sender, EventArgs e)
         {
-            
+            frmCadastroCliente cadastroCliente = new frmCadastroCliente();
+            this.Dispose();
+            cadastroCliente.ShowDialog();
+
         }
     }
 }

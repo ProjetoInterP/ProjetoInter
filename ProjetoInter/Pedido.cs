@@ -7,27 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static ProjetoInter.frmLogin;
 
 namespace ProjetoInter
 {
     public partial class frmPedido : Form
     {
+        private string cargoUsuário;
+        private frmLogin frmLogin;
         public frmPedido()
         {
             InitializeComponent();
+            string cargoUsuario = Global.FuncaoSelecionada;
+            frmLogin = new frmLogin();
         }
 
         private void picVoltar_Click(object sender, EventArgs e)
         {
-            //Volta para tela de Menu do Funcionário
-            frmMenuFuncionario pedidoFunc = new frmMenuFuncionario();
             this.Dispose();
-            pedidoFunc.Show();
-
-            //Volta para tela de Menu do Administrador
-            frmMenuAdministrador pedidoAdmin = new frmMenuAdministrador();
-            this.Dispose();
-            pedidoAdmin.Show();
+            frmLogin.VoltarAoFormAnterior();
         }
     }
 }
