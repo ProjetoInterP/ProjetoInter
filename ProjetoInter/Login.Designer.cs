@@ -66,6 +66,7 @@
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(171, 20);
             this.txtSenha.TabIndex = 2;
+            
             // 
             // cmbFuncao
             // 
@@ -102,7 +103,7 @@
             this.lblAtendimento.ForeColor = System.Drawing.Color.MintCream;
             this.lblAtendimento.Location = new System.Drawing.Point(12, 422);
             this.lblAtendimento.Name = "lblAtendimento";
-            this.lblAtendimento.Size = new System.Drawing.Size(225, 16);
+            this.lblAtendimento.Size = new System.Drawing.Size(280, 20);
             this.lblAtendimento.TabIndex = 8;
             this.lblAtendimento.Text = "Central de atendimento xxx-xxxx";
             // 
@@ -124,7 +125,7 @@
             this.lblFraseLogin.ForeColor = System.Drawing.Color.Goldenrod;
             this.lblFraseLogin.Location = new System.Drawing.Point(293, 112);
             this.lblFraseLogin.Name = "lblFraseLogin";
-            this.lblFraseLogin.Size = new System.Drawing.Size(137, 13);
+            this.lblFraseLogin.Size = new System.Drawing.Size(174, 17);
             this.lblFraseLogin.TabIndex = 9;
             this.lblFraseLogin.Text = "Sign in to Bella Napoli ";
             // 
@@ -156,7 +157,7 @@
             this.lblUser.ForeColor = System.Drawing.SystemColors.Window;
             this.lblUser.Location = new System.Drawing.Point(281, 152);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(174, 16);
+            this.lblUser.Size = new System.Drawing.Size(216, 20);
             this.lblUser.TabIndex = 15;
             this.lblUser.Text = "Username or email address";
             // 
@@ -167,7 +168,7 @@
             this.lblPassword.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.lblPassword.Location = new System.Drawing.Point(281, 227);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(67, 16);
+            this.lblPassword.Size = new System.Drawing.Size(83, 20);
             this.lblPassword.TabIndex = 16;
             this.lblPassword.Text = "Password";
             // 

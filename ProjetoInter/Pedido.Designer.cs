@@ -32,6 +32,7 @@
             this.pnlPedidos = new System.Windows.Forms.Panel();
             this.picVoltar = new System.Windows.Forms.PictureBox();
             this.panelContainerProdutos = new System.Windows.Forms.Panel();
+            this.lstProduto = new System.Windows.Forms.ListView();
             this.picPesquisaProd = new System.Windows.Forms.PictureBox();
             this.txtPesquisaProd = new System.Windows.Forms.TextBox();
             this.txtDescricao = new System.Windows.Forms.TextBox();
@@ -40,14 +41,13 @@
             this.lblTotal = new System.Windows.Forms.Label();
             this.picImagem = new System.Windows.Forms.PictureBox();
             this.panelContainerClientes = new System.Windows.Forms.Panel();
+            this.lstNome = new System.Windows.Forms.ListView();
             this.picPesquisaClientes = new System.Windows.Forms.PictureBox();
             this.txtPesquisaNome = new System.Windows.Forms.TextBox();
             this.panelProdutos = new System.Windows.Forms.Panel();
             this.lblProdutos = new System.Windows.Forms.Label();
             this.panelClientes = new System.Windows.Forms.Panel();
             this.lblClientes = new System.Windows.Forms.Label();
-            this.lstNome = new System.Windows.Forms.ListView();
-            this.lstProduto = new System.Windows.Forms.ListView();
             this.pnlPedidos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picVoltar)).BeginInit();
             this.panelContainerProdutos.SuspendLayout();
@@ -102,6 +102,15 @@
             this.panelContainerProdutos.Size = new System.Drawing.Size(786, 272);
             this.panelContainerProdutos.TabIndex = 3;
             // 
+            // lstProduto
+            // 
+            this.lstProduto.HideSelection = false;
+            this.lstProduto.Location = new System.Drawing.Point(278, 44);
+            this.lstProduto.Name = "lstProduto";
+            this.lstProduto.Size = new System.Drawing.Size(499, 142);
+            this.lstProduto.TabIndex = 4;
+            this.lstProduto.UseCompatibleStateImageBehavior = false;
+            // 
             // picPesquisaProd
             // 
             this.picPesquisaProd.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -118,9 +127,10 @@
             this.txtPesquisaProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtPesquisaProd.Location = new System.Drawing.Point(278, 10);
             this.txtPesquisaProd.Name = "txtPesquisaProd";
-            this.txtPesquisaProd.Size = new System.Drawing.Size(387, 26);
+            this.txtPesquisaProd.Size = new System.Drawing.Size(387, 30);
             this.txtPesquisaProd.TabIndex = 16;
             this.txtPesquisaProd.Text = "Pesquisar por Produto";
+            this.txtPesquisaProd.TextChanged += new System.EventHandler(this.txtPesquisaProd_TextChanged);
             // 
             // txtDescricao
             // 
@@ -143,7 +153,7 @@
             this.cboTipoVenda.MaximumSize = new System.Drawing.Size(240, 0);
             this.cboTipoVenda.MinimumSize = new System.Drawing.Size(240, 0);
             this.cboTipoVenda.Name = "cboTipoVenda";
-            this.cboTipoVenda.Size = new System.Drawing.Size(240, 28);
+            this.cboTipoVenda.Size = new System.Drawing.Size(240, 33);
             this.cboTipoVenda.TabIndex = 14;
             this.cboTipoVenda.Text = "Tipo de venda:";
             // 
@@ -154,7 +164,7 @@
             this.lblValor.ForeColor = System.Drawing.SystemColors.Window;
             this.lblValor.Location = new System.Drawing.Point(255, 215);
             this.lblValor.Name = "lblValor";
-            this.lblValor.Size = new System.Drawing.Size(169, 25);
+            this.lblValor.Size = new System.Drawing.Size(216, 31);
             this.lblValor.TabIndex = 13;
             this.lblValor.Text = "VALOR TOTAL: ";
             // 
@@ -166,7 +176,7 @@
             this.lblTotal.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lblTotal.Location = new System.Drawing.Point(430, 215);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(0, 24);
+            this.lblTotal.Size = new System.Drawing.Size(0, 29);
             this.lblTotal.TabIndex = 12;
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
@@ -189,6 +199,15 @@
             this.panelContainerClientes.Size = new System.Drawing.Size(786, 195);
             this.panelContainerClientes.TabIndex = 2;
             // 
+            // lstNome
+            // 
+            this.lstNome.HideSelection = false;
+            this.lstNome.Location = new System.Drawing.Point(14, 35);
+            this.lstNome.Name = "lstNome";
+            this.lstNome.Size = new System.Drawing.Size(763, 142);
+            this.lstNome.TabIndex = 3;
+            this.lstNome.UseCompatibleStateImageBehavior = false;
+            // 
             // picPesquisaClientes
             // 
             this.picPesquisaClientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -206,7 +225,7 @@
             this.txtPesquisaNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtPesquisaNome.Location = new System.Drawing.Point(14, 3);
             this.txtPesquisaNome.Name = "txtPesquisaNome";
-            this.txtPesquisaNome.Size = new System.Drawing.Size(355, 26);
+            this.txtPesquisaNome.Size = new System.Drawing.Size(355, 30);
             this.txtPesquisaNome.TabIndex = 1;
             this.txtPesquisaNome.Text = "Pesquisar por nome";
             // 
@@ -226,7 +245,7 @@
             this.lblProdutos.ForeColor = System.Drawing.SystemColors.Window;
             this.lblProdutos.Location = new System.Drawing.Point(342, 9);
             this.lblProdutos.Name = "lblProdutos";
-            this.lblProdutos.Size = new System.Drawing.Size(123, 24);
+            this.lblProdutos.Size = new System.Drawing.Size(158, 29);
             this.lblProdutos.TabIndex = 1;
             this.lblProdutos.Text = "PRODUTOS";
             // 
@@ -247,27 +266,9 @@
             this.lblClientes.ForeColor = System.Drawing.SystemColors.Window;
             this.lblClientes.Location = new System.Drawing.Point(342, 9);
             this.lblClientes.Name = "lblClientes";
-            this.lblClientes.Size = new System.Drawing.Size(109, 24);
+            this.lblClientes.Size = new System.Drawing.Size(139, 29);
             this.lblClientes.TabIndex = 0;
             this.lblClientes.Text = "CLIENTES";
-            // 
-            // lstNome
-            // 
-            this.lstNome.HideSelection = false;
-            this.lstNome.Location = new System.Drawing.Point(14, 35);
-            this.lstNome.Name = "lstNome";
-            this.lstNome.Size = new System.Drawing.Size(763, 142);
-            this.lstNome.TabIndex = 3;
-            this.lstNome.UseCompatibleStateImageBehavior = false;
-            // 
-            // lstProduto
-            // 
-            this.lstProduto.HideSelection = false;
-            this.lstProduto.Location = new System.Drawing.Point(278, 44);
-            this.lstProduto.Name = "lstProduto";
-            this.lstProduto.Size = new System.Drawing.Size(499, 142);
-            this.lstProduto.TabIndex = 4;
-            this.lstProduto.UseCompatibleStateImageBehavior = false;
             // 
             // frmPedido
             // 

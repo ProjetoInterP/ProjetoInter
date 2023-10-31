@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroCliente));
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
@@ -69,6 +69,7 @@
             this.btnAdicionar.TabIndex = 40;
             this.btnAdicionar.Text = "Adicionar";
             this.btnAdicionar.UseVisualStyleBackColor = false;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // dgvClientes
             // 
@@ -78,23 +79,23 @@
             this.dgvClientes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvClientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
             this.dgvClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(220)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.InfoText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SlateBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvClientes.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(220)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.InfoText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SlateBlue;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvClientes.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvClientes.EnableHeadersVisualStyles = false;
             this.dgvClientes.Location = new System.Drawing.Point(159, 344);
             this.dgvClientes.MultiSelect = false;
@@ -105,6 +106,8 @@
             this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClientes.Size = new System.Drawing.Size(331, 174);
             this.dgvClientes.TabIndex = 39;
+            this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
+            this.dgvClientes.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvClientes_CellFormatting);
             // 
             // btnRemover
             // 
@@ -120,6 +123,7 @@
             this.btnRemover.TabIndex = 38;
             this.btnRemover.Text = "Remover";
             this.btnRemover.UseVisualStyleBackColor = false;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
             // btnEditar
             // 
@@ -136,13 +140,14 @@
             this.btnEditar.TabIndex = 37;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtNome.Location = new System.Drawing.Point(159, 73);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(320, 22);
+            this.txtNome.Size = new System.Drawing.Size(320, 26);
             this.txtNome.TabIndex = 36;
             // 
             // lblNome
@@ -153,7 +158,7 @@
             this.lblNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(253)))));
             this.lblNome.Location = new System.Drawing.Point(155, 46);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(167, 24);
+            this.lblNome.Size = new System.Drawing.Size(210, 29);
             this.lblNome.TabIndex = 35;
             this.lblNome.Text = "Nome Completo:";
             // 
@@ -162,7 +167,7 @@
             this.txtNomeCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtNomeCliente.Location = new System.Drawing.Point(159, 300);
             this.txtNomeCliente.Name = "txtNomeCliente";
-            this.txtNomeCliente.Size = new System.Drawing.Size(236, 22);
+            this.txtNomeCliente.Size = new System.Drawing.Size(236, 26);
             this.txtNomeCliente.TabIndex = 44;
             // 
             // label1
@@ -171,9 +176,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(253)))));
-            this.label1.Location = new System.Drawing.Point(155, 273);
+            this.label1.Location = new System.Drawing.Point(155, 270);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 24);
+            this.label1.Size = new System.Drawing.Size(137, 29);
             this.label1.TabIndex = 45;
             this.label1.Text = "Pesquisar:";
             // 
@@ -182,7 +187,7 @@
             this.txtEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtEndereco.Location = new System.Drawing.Point(159, 151);
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(320, 22);
+            this.txtEndereco.Size = new System.Drawing.Size(320, 26);
             this.txtEndereco.TabIndex = 46;
             // 
             // lblEndereco
@@ -191,9 +196,9 @@
             this.lblEndereco.BackColor = System.Drawing.Color.Transparent;
             this.lblEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEndereco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(253)))));
-            this.lblEndereco.Location = new System.Drawing.Point(155, 124);
+            this.lblEndereco.Location = new System.Drawing.Point(155, 121);
             this.lblEndereco.Name = "lblEndereco";
-            this.lblEndereco.Size = new System.Drawing.Size(108, 24);
+            this.lblEndereco.Size = new System.Drawing.Size(133, 29);
             this.lblEndereco.TabIndex = 47;
             this.lblEndereco.Text = "Endereço:";
             // 
@@ -203,9 +208,9 @@
             this.lblTelefone.BackColor = System.Drawing.Color.Transparent;
             this.lblTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelefone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(253)))));
-            this.lblTelefone.Location = new System.Drawing.Point(155, 192);
+            this.lblTelefone.Location = new System.Drawing.Point(155, 190);
             this.lblTelefone.Name = "lblTelefone";
-            this.lblTelefone.Size = new System.Drawing.Size(99, 24);
+            this.lblTelefone.Size = new System.Drawing.Size(125, 29);
             this.lblTelefone.TabIndex = 49;
             this.lblTelefone.Text = "Telefone:";
             // 
@@ -215,7 +220,7 @@
             this.mskTelefone.Location = new System.Drawing.Point(163, 219);
             this.mskTelefone.Mask = "(xx) 9xxxx-xxxx";
             this.mskTelefone.Name = "mskTelefone";
-            this.mskTelefone.Size = new System.Drawing.Size(316, 22);
+            this.mskTelefone.Size = new System.Drawing.Size(316, 26);
             this.mskTelefone.TabIndex = 50;
             this.mskTelefone.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             // 

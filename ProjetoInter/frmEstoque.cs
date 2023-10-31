@@ -168,5 +168,10 @@ namespace ProjetoInter
         {
             LimparCampos();
         }
+
+        private void dgvEstoque_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

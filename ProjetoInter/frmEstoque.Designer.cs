@@ -61,7 +61,7 @@
             this.btnAlterar.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterar.ForeColor = System.Drawing.Color.White;
             this.btnAlterar.Location = new System.Drawing.Point(227, 326);
-            this.btnAlterar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAlterar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(97, 33);
             this.btnAlterar.TabIndex = 28;
@@ -76,7 +76,7 @@
             this.btnRemover.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemover.ForeColor = System.Drawing.Color.White;
             this.btnRemover.Location = new System.Drawing.Point(328, 326);
-            this.btnRemover.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRemover.Margin = new System.Windows.Forms.Padding(2);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Size = new System.Drawing.Size(97, 33);
             this.btnRemover.TabIndex = 27;
@@ -91,7 +91,7 @@
             this.btnAdicionar.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdicionar.ForeColor = System.Drawing.Color.White;
             this.btnAdicionar.Location = new System.Drawing.Point(117, 326);
-            this.btnAdicionar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdicionar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(105, 33);
             this.btnAdicionar.TabIndex = 26;
@@ -102,7 +102,7 @@
             // txtProcurarProd
             // 
             this.txtProcurarProd.Location = new System.Drawing.Point(233, 186);
-            this.txtProcurarProd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtProcurarProd.Margin = new System.Windows.Forms.Padding(2);
             this.txtProcurarProd.Name = "txtProcurarProd";
             this.txtProcurarProd.Size = new System.Drawing.Size(164, 20);
             this.txtProcurarProd.TabIndex = 24;
@@ -116,7 +116,7 @@
             this.lblProcurarProdut.Location = new System.Drawing.Point(114, 185);
             this.lblProcurarProdut.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProcurarProdut.Name = "lblProcurarProdut";
-            this.lblProcurarProdut.Size = new System.Drawing.Size(124, 17);
+            this.lblProcurarProdut.Size = new System.Drawing.Size(152, 21);
             this.lblProcurarProdut.TabIndex = 23;
             this.lblProcurarProdut.Text = "Procurar Produto:";
             // 
@@ -129,7 +129,7 @@
             this.lblQuantidade.Location = new System.Drawing.Point(258, 120);
             this.lblQuantidade.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblQuantidade.Name = "lblQuantidade";
-            this.lblQuantidade.Size = new System.Drawing.Size(81, 16);
+            this.lblQuantidade.Size = new System.Drawing.Size(92, 19);
             this.lblQuantidade.TabIndex = 21;
             this.lblQuantidade.Text = "Quantidade";
             // 
@@ -142,14 +142,14 @@
             this.lblCat.Location = new System.Drawing.Point(114, 120);
             this.lblCat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCat.Name = "lblCat";
-            this.lblCat.Size = new System.Drawing.Size(73, 16);
+            this.lblCat.Size = new System.Drawing.Size(85, 19);
             this.lblCat.TabIndex = 19;
             this.lblCat.Text = "Categoria:";
             // 
             // txtDescricaoProd
             // 
             this.txtDescricaoProd.Location = new System.Drawing.Point(116, 90);
-            this.txtDescricaoProd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescricaoProd.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescricaoProd.Name = "txtDescricaoProd";
             this.txtDescricaoProd.Size = new System.Drawing.Size(310, 20);
             this.txtDescricaoProd.TabIndex = 18;
@@ -163,14 +163,14 @@
             this.lblDescricao.Location = new System.Drawing.Point(114, 69);
             this.lblDescricao.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(165, 18);
+            this.lblDescricao.Size = new System.Drawing.Size(207, 23);
             this.lblDescricao.TabIndex = 17;
             this.lblDescricao.Text = "Descrição do Produto:";
             // 
             // txtNomeProduto
             // 
             this.txtNomeProduto.Location = new System.Drawing.Point(117, 37);
-            this.txtNomeProduto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNomeProduto.Margin = new System.Windows.Forms.Padding(2);
             this.txtNomeProduto.Name = "txtNomeProduto";
             this.txtNomeProduto.Size = new System.Drawing.Size(308, 20);
             this.txtNomeProduto.TabIndex = 16;
@@ -184,14 +184,14 @@
             this.lblNomeProduto.Location = new System.Drawing.Point(114, 16);
             this.lblNomeProduto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNomeProduto.Name = "lblNomeProduto";
-            this.lblNomeProduto.Size = new System.Drawing.Size(135, 18);
+            this.lblNomeProduto.Size = new System.Drawing.Size(170, 23);
             this.lblNomeProduto.TabIndex = 15;
             this.lblNomeProduto.Text = "Nome do Produto:";
             // 
             // txtCategoriaEstoque
             // 
             this.txtCategoriaEstoque.Location = new System.Drawing.Point(117, 140);
-            this.txtCategoriaEstoque.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCategoriaEstoque.Margin = new System.Windows.Forms.Padding(2);
             this.txtCategoriaEstoque.Name = "txtCategoriaEstoque";
             this.txtCategoriaEstoque.Size = new System.Drawing.Size(129, 20);
             this.txtCategoriaEstoque.TabIndex = 32;
@@ -199,7 +199,7 @@
             // txtQuantidadeEstoque
             // 
             this.txtQuantidadeEstoque.Location = new System.Drawing.Point(261, 140);
-            this.txtQuantidadeEstoque.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtQuantidadeEstoque.Margin = new System.Windows.Forms.Padding(2);
             this.txtQuantidadeEstoque.Name = "txtQuantidadeEstoque";
             this.txtQuantidadeEstoque.Size = new System.Drawing.Size(129, 20);
             this.txtQuantidadeEstoque.TabIndex = 33;
@@ -209,13 +209,14 @@
             this.dgvEstoque.BackgroundColor = System.Drawing.Color.White;
             this.dgvEstoque.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEstoque.Location = new System.Drawing.Point(116, 208);
-            this.dgvEstoque.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvEstoque.Margin = new System.Windows.Forms.Padding(2);
             this.dgvEstoque.Name = "dgvEstoque";
             this.dgvEstoque.RowHeadersWidth = 51;
             this.dgvEstoque.RowTemplate.Height = 24;
             this.dgvEstoque.Size = new System.Drawing.Size(308, 114);
             this.dgvEstoque.TabIndex = 36;
             this.dgvEstoque.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstoque_CellClick);
+            this.dgvEstoque.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstoque_CellContentClick);
             this.dgvEstoque.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvEstoque_CellFormatting_1);
             // 
             // pictureBox1

@@ -66,7 +66,7 @@
             this.lblNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(253)))));
             this.lblNome.Location = new System.Drawing.Point(157, 63);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(72, 24);
+            this.lblNome.Size = new System.Drawing.Size(90, 29);
             this.lblNome.TabIndex = 0;
             this.lblNome.Text = "Nome:";
             // 
@@ -78,7 +78,7 @@
             this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(253)))));
             this.lblUsuario.Location = new System.Drawing.Point(156, 126);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(87, 24);
+            this.lblUsuario.Size = new System.Drawing.Size(110, 29);
             this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "Usuário:";
             // 
@@ -90,7 +90,7 @@
             this.lblSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(253)))));
             this.lblSenha.Location = new System.Drawing.Point(325, 126);
             this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(76, 24);
+            this.lblSenha.Size = new System.Drawing.Size(94, 29);
             this.lblSenha.TabIndex = 2;
             this.lblSenha.Text = "Senha:";
             // 
@@ -102,7 +102,7 @@
             this.lblAcesso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(253)))));
             this.lblAcesso.Location = new System.Drawing.Point(156, 257);
             this.lblAcesso.Name = "lblAcesso";
-            this.lblAcesso.Size = new System.Drawing.Size(160, 24);
+            this.lblAcesso.Size = new System.Drawing.Size(201, 29);
             this.lblAcesso.TabIndex = 3;
             this.lblAcesso.Text = "Tipo de acesso:";
             // 
@@ -111,15 +111,16 @@
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtNome.Location = new System.Drawing.Point(161, 90);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(320, 22);
+            this.txtNome.Size = new System.Drawing.Size(320, 26);
             this.txtNome.TabIndex = 4;
+            
             // 
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtUsuario.Location = new System.Drawing.Point(160, 153);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(157, 22);
+            this.txtUsuario.Size = new System.Drawing.Size(157, 26);
             this.txtUsuario.TabIndex = 5;
             // 
             // txtSenha
@@ -127,7 +128,7 @@
             this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtSenha.Location = new System.Drawing.Point(329, 153);
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(152, 22);
+            this.txtSenha.Size = new System.Drawing.Size(152, 26);
             this.txtSenha.TabIndex = 6;
             // 
             // cmbAcesso
@@ -139,7 +140,7 @@
             "Funcionário"});
             this.cmbAcesso.Location = new System.Drawing.Point(160, 284);
             this.cmbAcesso.Name = "cmbAcesso";
-            this.cmbAcesso.Size = new System.Drawing.Size(321, 24);
+            this.cmbAcesso.Size = new System.Drawing.Size(321, 28);
             this.cmbAcesso.TabIndex = 7;
             // 
             // lblPesquisar
@@ -150,7 +151,7 @@
             this.lblPesquisar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(253)))));
             this.lblPesquisar.Location = new System.Drawing.Point(156, 311);
             this.lblPesquisar.Name = "lblPesquisar";
-            this.lblPesquisar.Size = new System.Drawing.Size(108, 24);
+            this.lblPesquisar.Size = new System.Drawing.Size(137, 29);
             this.lblPesquisar.TabIndex = 8;
             this.lblPesquisar.Text = "Pesquisar:";
             // 
@@ -230,7 +231,7 @@
             this.txtNomeFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtNomeFuncionario.Location = new System.Drawing.Point(160, 338);
             this.txtNomeFuncionario.Name = "txtNomeFuncionario";
-            this.txtNomeFuncionario.Size = new System.Drawing.Size(236, 22);
+            this.txtNomeFuncionario.Size = new System.Drawing.Size(236, 26);
             this.txtNomeFuncionario.TabIndex = 16;
             this.txtNomeFuncionario.TextChanged += new System.EventHandler(this.txtNomeFuncionario_TextChanged);
             // 
@@ -256,7 +257,7 @@
             this.txtConfirmarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtConfirmarSenha.Location = new System.Drawing.Point(160, 216);
             this.txtConfirmarSenha.Name = "txtConfirmarSenha";
-            this.txtConfirmarSenha.Size = new System.Drawing.Size(316, 22);
+            this.txtConfirmarSenha.Size = new System.Drawing.Size(316, 26);
             this.txtConfirmarSenha.TabIndex = 20;
             // 
             // lblconfirmaSenha
@@ -267,7 +268,7 @@
             this.lblconfirmaSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(253)))));
             this.lblconfirmaSenha.Location = new System.Drawing.Point(156, 189);
             this.lblconfirmaSenha.Name = "lblconfirmaSenha";
-            this.lblconfirmaSenha.Size = new System.Drawing.Size(169, 24);
+            this.lblconfirmaSenha.Size = new System.Drawing.Size(211, 29);
             this.lblconfirmaSenha.TabIndex = 19;
             this.lblconfirmaSenha.Text = "Confirmar senha:";
             // 

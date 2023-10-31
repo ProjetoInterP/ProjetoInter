@@ -27,5 +27,12 @@ namespace ProjetoInter
             this.Dispose();
             frmLogin.VoltarAoFormAnterior();
         }
+
+        private void txtPesquisaProd_TextChanged(object sender, EventArgs e)
+        {
+
+            
+
+        }
     }
 }
