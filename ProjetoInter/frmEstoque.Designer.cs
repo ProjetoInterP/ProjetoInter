@@ -106,6 +106,7 @@
             this.txtProcurarProd.Name = "txtProcurarProd";
             this.txtProcurarProd.Size = new System.Drawing.Size(164, 20);
             this.txtProcurarProd.TabIndex = 24;
+            this.txtProcurarProd.TextChanged += new System.EventHandler(this.txtProcurarProd_TextChanged);
             // 
             // lblProcurarProdut
             // 
@@ -116,7 +117,7 @@
             this.lblProcurarProdut.Location = new System.Drawing.Point(114, 185);
             this.lblProcurarProdut.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProcurarProdut.Name = "lblProcurarProdut";
-            this.lblProcurarProdut.Size = new System.Drawing.Size(152, 21);
+            this.lblProcurarProdut.Size = new System.Drawing.Size(124, 17);
             this.lblProcurarProdut.TabIndex = 23;
             this.lblProcurarProdut.Text = "Procurar Produto:";
             // 
@@ -129,7 +130,7 @@
             this.lblQuantidade.Location = new System.Drawing.Point(258, 120);
             this.lblQuantidade.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblQuantidade.Name = "lblQuantidade";
-            this.lblQuantidade.Size = new System.Drawing.Size(92, 19);
+            this.lblQuantidade.Size = new System.Drawing.Size(81, 16);
             this.lblQuantidade.TabIndex = 21;
             this.lblQuantidade.Text = "Quantidade";
             // 
@@ -142,7 +143,7 @@
             this.lblCat.Location = new System.Drawing.Point(114, 120);
             this.lblCat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCat.Name = "lblCat";
-            this.lblCat.Size = new System.Drawing.Size(85, 19);
+            this.lblCat.Size = new System.Drawing.Size(73, 16);
             this.lblCat.TabIndex = 19;
             this.lblCat.Text = "Categoria:";
             // 
@@ -163,7 +164,7 @@
             this.lblDescricao.Location = new System.Drawing.Point(114, 69);
             this.lblDescricao.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(207, 23);
+            this.lblDescricao.Size = new System.Drawing.Size(165, 18);
             this.lblDescricao.TabIndex = 17;
             this.lblDescricao.Text = "Descrição do Produto:";
             // 
@@ -184,7 +185,7 @@
             this.lblNomeProduto.Location = new System.Drawing.Point(114, 16);
             this.lblNomeProduto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNomeProduto.Name = "lblNomeProduto";
-            this.lblNomeProduto.Size = new System.Drawing.Size(170, 23);
+            this.lblNomeProduto.Size = new System.Drawing.Size(135, 18);
             this.lblNomeProduto.TabIndex = 15;
             this.lblNomeProduto.Text = "Nome do Produto:";
             // 
@@ -216,7 +217,6 @@
             this.dgvEstoque.Size = new System.Drawing.Size(308, 114);
             this.dgvEstoque.TabIndex = 36;
             this.dgvEstoque.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstoque_CellClick);
-            this.dgvEstoque.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstoque_CellContentClick);
             this.dgvEstoque.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvEstoque_CellFormatting_1);
             // 
             // pictureBox1
@@ -250,6 +250,7 @@
             this.picBuscarEstoque.Size = new System.Drawing.Size(29, 31);
             this.picBuscarEstoque.TabIndex = 35;
             this.picBuscarEstoque.TabStop = false;
+            this.picBuscarEstoque.Click += new System.EventHandler(this.picBuscarEstoque_Click);
             // 
             // picVoltarEstoque
             // 

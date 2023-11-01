@@ -596,3 +596,4 @@ C:\Users\Weslley\source\repos\teste2\ProjetoInter\obj\Debug\ProjetoInter.csproj.
 C:\Users\Weslley\source\repos\teste2\ProjetoInter\obj\Debug\ProjetoInter.exe
 C:\Users\Weslley\source\repos\teste2\ProjetoInter\obj\Debug\ProjetoInter.pdb
 C:\Users\Tiago TG\Desktop\ProjetoInter\ProjetoInter\obj\Debug\ProjetoInter.frmCadastroCliente.resources
+C:\Users\Weslley\Source\Repos\ProjetoInter\ProjetoInter\obj\Debug\ProjetoInter.frmCadastroCliente.resources

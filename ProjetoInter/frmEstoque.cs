@@ -169,9 +169,46 @@ namespace ProjetoInter
             LimparCampos();
         }
 
-        private void dgvEstoque_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void picBuscarEstoque_Click(object sender, EventArgs e)
         {
+            string nomeProduto = txtProcurarProd.Text;
 
+            using (var db = new PizzariaDB())
+            {
+                var estoque = db.Estoque
+                    .Where(u => u.NomeProduto.Contains(nomeProduto))
+                    .ToList();
+
+                dgvEstoque.DataSource = estoque;
+            }
+        }
+
+        private void txtProcurarProd_TextChanged(object sender, EventArgs e)
+        {
+            string procurarProd = txtProcurarProd.Text;
+
+            // Faça uma consulta no banco de dados para encontrar o funcionário com o nome fornecido
+            using (var db = new PizzariaDB())
+            {
+                var estoque = db.Estoque.FirstOrDefault(u => u.NomeProduto.Contains(procurarProd));
+
+                if (estoque != null)
+                {
+                    // Preencha os campos de texto e combobox com os dados do funcionário encontrado
+                    txtNomeProduto.Text = estoque.NomeProduto;
+                    txtQuantidadeEstoque.Text = estoque.QuantidadeProduto.ToString();
+                    txtDescricaoProd.Text = estoque.DescricaoProduto;
+                    txtCategoriaEstoque.Text = estoque.CategoriaProduto;
+
+
+
+                }
+                else
+                {
+                    // Se nenhum estoque for encontrado, limpe os campos de texto
+                    LimparCampos();
+                }
+            }
         }
     }
 }

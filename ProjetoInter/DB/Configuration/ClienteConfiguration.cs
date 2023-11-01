@@ -25,7 +25,7 @@ namespace ProjetoInter.DB.Configuration
 
             builder.Property(x => x.Endereco).HasColumnType("Varchar(50)").IsRequired();
 
-            builder.Property(x => x.Telefone).HasColumnType("Varchar(14)").HasMaxLength(14).IsRequired();
+            builder.Property(x => x.Telefone).HasColumnType("Varchar(15)").HasMaxLength(15).IsRequired();
         }
     }
 }

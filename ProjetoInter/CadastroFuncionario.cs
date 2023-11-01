@@ -88,28 +88,33 @@ namespace ProjetoInter
 
         private void LimparCamposTexto()
         {
+
+            txtNomeFuncionario.Text = "";
             txtNome.Text = "";
             txtUsuario.Text = "";
             txtSenha.Text = "";
             txtConfirmarSenha.Text = "";
-            cmbAcesso.SelectedIndex = -1; // Limpa a seleção do ComboBox
+            cmbAcesso.SelectedIndex = -1;// Limpa a seleção do ComboBox
+            
         }
         private void picVoltarCadastro_Click(object sender, EventArgs e)
         {
             this.Dispose();
             frmLogin.VoltarAoFormAnterior();
+            dgvFuncionarios.CellFormatting += dgvFuncionarios_CellFormatting;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
             string cargoSelecionado = cmbAcesso.SelectedItem?.ToString();
-            string nomeCadastro = txtNome.Text;
+            string nomeCadastro = txtNomeFuncionario.Text;
 
             PizzariaDB _context = new PizzariaDB();
             Usuario usuario = _context.Usuarios.FirstOrDefault(x => x.Nome == nomeCadastro);
 
             if (usuario != null)
             {
+                usuario.Nome = txtNome.Text;
                 usuario.Cargo = cmbAcesso.Text;
                 usuario.Senha = txtSenha.Text;
 
@@ -127,6 +132,8 @@ namespace ProjetoInter
                 //Caso não encontra o produto solicitado
                 MessageBox.Show("Usuário não encontrado", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            LimparCampos();
+
         }
 
         private void picProcurarFuncionario_Click(object sender, EventArgs e)
@@ -209,27 +216,30 @@ namespace ProjetoInter
 
         private void dgvFuncionarios_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
+            // Antes de fazer modificações no DataGridView
+            dgvFuncionarios.SuspendLayout();
             // Especifique o índice da coluna que deseja alterar a cor
-            int columnIndex = dgvFuncionarios.Columns["Nome"].Index; // Substitua "Nome" pelo nome da sua coluna
+            int columnIndex = dgvFuncionarios.Columns["Nome"].Index;
 
-            // Verifique se a célula atual está na coluna desejada
+            // Verifique se a célula atual está na coluna desejada e se o valor não é nulo
             if (e.ColumnIndex == columnIndex && e.Value != null)
             {
                 // Verifique o valor da célula e defina a cor com base no valor
-                string valor = e.Value.ToString();
+                string valor = e.Value.ToString().Trim(); // Remova espaços extras
                 if (valor == "Admin")
                 {
                     // Defina a cor de fundo para a célula com valor "Admin"
-                    e.CellStyle.BackColor = Color.Purple; // Substitua pela cor que deseja
-                    e.CellStyle.ForeColor = Color.White; // Defina a cor do texto para melhor legibilidade
+                    e.CellStyle.BackColor = Color.Purple;
+                    e.CellStyle.ForeColor = Color.White;
                 }
                 else if (valor == "Funcionário")
                 {
                     // Defina a cor de fundo para a célula com valor "Funcionário"
-                    e.CellStyle.BackColor = Color.Blue; // Substitua pela cor que deseja
-                    e.CellStyle.ForeColor = Color.White; // Defina a cor do texto para melhor legibilidade
+                    e.CellStyle.BackColor = Color.DarkBlue;
+                    e.CellStyle.ForeColor = Color.White;
                 }
-                // Você pode adicionar mais condições conforme necessário
+                // Adicione mais condições conforme necessário
+                dgvFuncionarios.ResumeLayout();
             }
         }
 
