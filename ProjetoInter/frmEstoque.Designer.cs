@@ -117,7 +117,7 @@
             this.lblProcurarProdut.Location = new System.Drawing.Point(114, 185);
             this.lblProcurarProdut.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProcurarProdut.Name = "lblProcurarProdut";
-            this.lblProcurarProdut.Size = new System.Drawing.Size(124, 17);
+            this.lblProcurarProdut.Size = new System.Drawing.Size(152, 21);
             this.lblProcurarProdut.TabIndex = 23;
             this.lblProcurarProdut.Text = "Procurar Produto:";
             // 
@@ -130,7 +130,7 @@
             this.lblQuantidade.Location = new System.Drawing.Point(258, 120);
             this.lblQuantidade.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblQuantidade.Name = "lblQuantidade";
-            this.lblQuantidade.Size = new System.Drawing.Size(81, 16);
+            this.lblQuantidade.Size = new System.Drawing.Size(92, 19);
             this.lblQuantidade.TabIndex = 21;
             this.lblQuantidade.Text = "Quantidade";
             // 
@@ -143,7 +143,7 @@
             this.lblCat.Location = new System.Drawing.Point(114, 120);
             this.lblCat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCat.Name = "lblCat";
-            this.lblCat.Size = new System.Drawing.Size(73, 16);
+            this.lblCat.Size = new System.Drawing.Size(85, 19);
             this.lblCat.TabIndex = 19;
             this.lblCat.Text = "Categoria:";
             // 
@@ -164,7 +164,7 @@
             this.lblDescricao.Location = new System.Drawing.Point(114, 69);
             this.lblDescricao.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(165, 18);
+            this.lblDescricao.Size = new System.Drawing.Size(207, 23);
             this.lblDescricao.TabIndex = 17;
             this.lblDescricao.Text = "Descrição do Produto:";
             // 
@@ -185,7 +185,7 @@
             this.lblNomeProduto.Location = new System.Drawing.Point(114, 16);
             this.lblNomeProduto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNomeProduto.Name = "lblNomeProduto";
-            this.lblNomeProduto.Size = new System.Drawing.Size(135, 18);
+            this.lblNomeProduto.Size = new System.Drawing.Size(170, 23);
             this.lblNomeProduto.TabIndex = 15;
             this.lblNomeProduto.Text = "Nome do Produto:";
             // 
@@ -293,6 +293,7 @@
             this.Name = "frmEstoque";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estoque";
+            this.Load += new System.EventHandler(this.frmEstoque_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstoque)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLimpar)).EndInit();

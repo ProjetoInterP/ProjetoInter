@@ -27,6 +27,8 @@ namespace ProjetoInter
             
         }
 
+       
+
 
 
         private void picVoltarEstoque_Click(object sender, EventArgs e)
@@ -107,6 +109,11 @@ namespace ProjetoInter
             };
 
             _context.Estoque.Add(estoque);
+        }
+
+        private void frmEstoque_Load(object sender, EventArgs e)
+        {
+           
         }
 
 
@@ -210,5 +217,7 @@ namespace ProjetoInter
                 }
             }
         }
+
+     
     }
 }
