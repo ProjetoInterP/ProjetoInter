@@ -24,7 +24,7 @@ namespace ProjetoInter
             //serve para armazenar o que foi selecionado no form de login
             string cargoUsuario = Global.FuncaoSelecionada;
             frmLogin = new frmLogin();
-            
+
         }
 
        
@@ -38,6 +38,70 @@ namespace ProjetoInter
             
 
         }
+        private void btnAdicionar_Click(object sender, EventArgs e)
+        {
+            PizzariaDB _context = new PizzariaDB();
+
+            string txt_nome = txtNomeProduto.Text;
+            string txt_descricao = txtDescricaoProd.Text;
+            string txt_Categoria = txtCategoriaEstoque.Text;
+            int txt_Quantidade;
+
+            // Verifica se o valor em txtQuantidadeEstoque.Text é um número inteiro
+            if (int.TryParse(txtQuantidadeEstoque.Text, out txt_Quantidade))
+            {
+                Estoque estoque = new Estoque
+                {
+                    NomeProduto = txt_nome,
+                    DescricaoProduto = txt_descricao,
+                    QuantidadeProduto = txt_Quantidade,
+                    CategoriaProduto = txt_Categoria
+                };
+
+                // comando para adicionar no banco de dados
+                _context.Estoque.AddAsync(estoque);
+                // comando para salvar as alterações no banco de dados
+                _context.SaveChangesAsync();
+                // Limpar os campos de texto após o cadastro bem-sucedido
+                LimparCampos();
+            }
+            else
+            {
+                MessageBox.Show("Quantidade inválida. Por favor, insira um número inteiro.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            string ProdutoCad = txtProcurarProd.Text;
+
+            PizzariaDB _context = new PizzariaDB();
+            Estoque estoque = _context.Estoque.FirstOrDefault(x => x.NomeProduto == ProdutoCad);
+
+            if (estoque != null)
+            {
+               
+
+                estoque.NomeProduto = txtNomeProduto.Text; 
+                estoque.DescricaoProduto = txtDescricaoProd.Text;
+                estoque.QuantidadeProduto = int.Parse(txtQuantidadeEstoque.Text);
+                estoque.CategoriaProduto = txtCategoriaEstoque.Text;
+
+                _context.Update(estoque);
+                _context.SaveChanges();
+
+                // Exibe Mensagem de Sucesso
+                MessageBox.Show("Alteração feita com sucesso", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                // Produto não encontrado, exibir mensagem de erro.
+                MessageBox.Show("Produto não encontrado", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            LimparCampos();
+        }
 
         private void btnRemover_Click(object sender, EventArgs e)
         {
@@ -48,121 +112,52 @@ namespace ProjetoInter
 
             if (estoque != null)
             {
-                //Remove produto inserido
+                // Remove o produto do banco de dados
                 _context.Estoque.Remove(estoque);
-                MessageBox.Show("Produto removido com sucesso", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
-            else
-            {
-                //Caso produto não exista
-                MessageBox.Show("Produto não encontrado ou não existe", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-
-        }
-
-        private void btnAlterar_Click(object sender, EventArgs e)
-        {
-            string nomeProduto = txtNomeProduto.Text;
-
-            PizzariaDB _context = new PizzariaDB();
-            Estoque estoque = _context.Estoque.FirstOrDefault(x => x.NomeProduto == nomeProduto);
-
-            if (estoque != null)
-            {
-                estoque.DescricaoProduto = txtDescricaoProd.Text;
-                estoque.QuantidadeProduto = int.Parse(txtQuantidadeEstoque.Text);
-                estoque.CategoriaProduto = txtCategoriaEstoque.Text;
-
                 _context.SaveChanges();
 
-                //Exibe Mensagem de Sucesso
-                MessageBox.Show("Alteração feita com sucesso", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
+                // Atualize o DataGridView
+                dgvEstoqueDB.DataSource = _context.Estoque.ToList();
+                LimparCampos();
+                MessageBox.Show("Produto removido com sucesso", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                //Caso não encontra o produto solicitado
-                MessageBox.Show("Produto não encontrado", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                // Caso o produto não exista
+                MessageBox.Show("Produto não encontrado ou não existe", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
-
-        }
-
-        private void btnAdicionar_Click(object sender, EventArgs e)
-        {
-            PizzariaDB _context = new PizzariaDB();
-
-            string txt_nome = txtNomeProduto.Text;
-            string txt_descricao = txtDescricaoProd.Text;
-            int txt_Quantidade = int.Parse(txtQuantidadeEstoque.Text);
-            string txt_Categoria = txtCategoriaEstoque.Text;
-
-            Estoque estoque = new Estoque
-            {
-                NomeProduto = txt_nome,
-                DescricaoProduto = txt_descricao,
-                QuantidadeProduto = txt_Quantidade,
-                CategoriaProduto = txt_Categoria
-            };
-
-            _context.Estoque.Add(estoque);
         }
 
         private void frmEstoque_Load(object sender, EventArgs e)
         {
-           
-        }
 
-
-
-        private void dgvEstoque_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            int columnIndex = dgvEstoque.Columns["Categoria"].Index;
-
-            if (e.ColumnIndex == columnIndex && e.Value != null)
+            using (var db = new PizzariaDB())
             {
-                // Verifique o valor da célula e defina a cor com base no valor
-                string valor = e.Value.ToString();
-                if (valor == "Bebida")
-                {
-                    // Defina a cor de fundo para a célula com valor "Admin"
-                    e.CellStyle.BackColor = Color.Blue; // Substitua pela cor que deseja
-                    e.CellStyle.ForeColor = Color.White; // Defina a cor do texto para melhor legibilidade
-                }
-                else if (valor == "Pizza")
-                {
-                    // Defina a cor de fundo para a célula com valor "Funcionário"
-                    e.CellStyle.BackColor = Color.DarkOrange; // Substitua pela cor que deseja
-                    e.CellStyle.ForeColor = Color.White; // Defina a cor do texto para melhor legibilidade
-                }
-                
-                // Você pode adicionar mais condições conforme necessário
-
-
-
+                var estoque = db.Estoque.ToList();
+                dgvEstoqueDB.DataSource = estoque;
             }
         }
 
-        private void dgvEstoque_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvEstoqueDB_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0) // Certificar de que há um usuário cadastrado
             {
-                DataGridViewRow row = dgvEstoque.Rows[e.RowIndex];
+                DataGridViewRow row = dgvEstoqueDB.Rows[e.RowIndex];
 
                 // DataGrid de Estoque
-                txtNomeProduto.Text = row.Cells["Nome"].Value.ToString();
-                txtDescricaoProd.Text = row.Cells["Descrição"].Value.ToString();
-                txtCategoriaEstoque.Text = row.Cells["Categoria"].Value.ToString();
-                txtQuantidadeEstoque.Text = row.Cells["Qtd"].Value.ToString();
-                
-               
+                txtNomeProduto.Text = row.Cells["NomeProduto"].Value.ToString();
+                txtDescricaoProd.Text = row.Cells["DescricaoProduto"].Value.ToString();
+                txtCategoriaEstoque.Text = row.Cells["CategoriaProduto"].Value.ToString();
+                txtQuantidadeEstoque.Text = row.Cells["QuantidadeProduto"].Value.ToString();
+                txtProcurarProd.Text = row.Cells["NomeProduto"].Value.ToString();
+
+
             }
         }
+
         private void LimparCampos()
         {
+            txtProcurarProd.Text = "";
             txtNomeProduto.Text = "";
             txtDescricaoProd.Text = "";
             txtCategoriaEstoque.Text = "";
@@ -186,7 +181,8 @@ namespace ProjetoInter
                     .Where(u => u.NomeProduto.Contains(nomeProduto))
                     .ToList();
 
-                dgvEstoque.DataSource = estoque;
+                dgvEstoqueDB.DataSource = estoque;
+
             }
         }
 
@@ -218,6 +214,6 @@ namespace ProjetoInter
             }
         }
 
-     
+        
     }
 }

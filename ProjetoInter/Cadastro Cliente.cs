@@ -25,12 +25,12 @@ namespace ProjetoInter
         }
         private void LimparCampos()
         {
+            txtNomeCliente.Text = "";
             txtNome.Text = "";
             txtEndereco.Text = "";
             mskTelefone.Text = "";
-            txtNomeCliente.Text = "";
             txtNome.Focus();
-            
+
         }
         private void picLimpar_Click(object sender, EventArgs e)
         {
@@ -41,11 +41,6 @@ namespace ProjetoInter
         {
             this.Dispose();
             frmLogin.VoltarAoFormAnterior();
-        }
-
-        private void dgvClientes_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-
         }
 
         private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -144,7 +139,7 @@ namespace ProjetoInter
             {
                 var Clientes = db.Clientes.ToList(); // Ou qualquer outra consulta que você precise
 
-              dgvClientes.DataSource = Clientes;
+                dgvClientes.DataSource = Clientes;
             }
         }
 
@@ -196,7 +191,7 @@ namespace ProjetoInter
                     txtNome.Text = cliente.Name;
                     txtEndereco.Text = cliente.Endereco;
                     mskTelefone.Text = cliente.Telefone;
-                    
+
 
 
 

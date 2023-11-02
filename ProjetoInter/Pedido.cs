@@ -115,15 +115,12 @@ namespace ProjetoInter
         {
             using (var db = new PizzariaDB())
             {
+                //usa o dgvClientePedido
                 var clientes = db.Clientes.ToList(); 
-
                 dgvClientePedido.DataSource = clientes;
-            }
 
-            using (var db = new PizzariaDB())
-            {
+
                 var produtos = db.Estoque.ToList();
-
                 dgvProdutosPedido.DataSource = produtos;
             }
         }

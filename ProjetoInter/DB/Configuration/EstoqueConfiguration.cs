@@ -13,8 +13,6 @@ namespace ProjetoInter.DB.Configuration
     {
         public void Configure(EntityTypeBuilder<Estoque> builder)
         {
-            builder.HasKey(x => x.Id);
-
             builder.Property(x => x.NomeProduto).HasColumnType("varchar(30)").IsRequired();
 
             builder.Property(x => x.QuantidadeProduto).HasColumnType("int").IsRequired();
