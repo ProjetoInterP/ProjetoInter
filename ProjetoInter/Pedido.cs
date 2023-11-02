@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,11 +17,15 @@ namespace ProjetoInter
     {
         private string cargoUsuário;
         private frmLogin frmLogin;
+        string pastaSelecionada = "";
         public frmPedido()
         {
             InitializeComponent();
             string cargoUsuario = Global.FuncaoSelecionada;
             frmLogin = new frmLogin();
+            pastaSelecionada = Application.StartupPath + @"\";
+
+            MessageBox.Show(pastaSelecionada);
         }
 
         private void picVoltar_Click(object sender, EventArgs e)
@@ -66,6 +71,7 @@ namespace ProjetoInter
         {
 
             string nomeProduto = txtPesquisaProd.Text;
+            string nomeProdutoCoringa = txtPesquisaProd.Text;
 
             using (var db = new PizzariaDB())
             {
@@ -82,11 +88,8 @@ namespace ProjetoInter
                 {
                     dgvProdutosPedido.DataSource = null;
 
-                    // Exibe uma pizza coringa aleatória
-                    Random random = new Random();
-                    int indicePizzaCoringa = random.Next(pizzasCoringa.Count);
-                    string pizzaCoringa = pizzasCoringa[indicePizzaCoringa];
-                    picImagem.Image = Image.FromFile(@".../.../Debug/${ImagemProdutosCoringa}.jpg");
+                    // Exibe a Pizza de Frango com Catupiry
+                    ImagemProdutosCoringa(nomeProdutoCoringa);
                 }
 
             }
@@ -103,7 +106,7 @@ namespace ProjetoInter
                 DataGridViewRow row = dgvClientePedido.Rows[e.RowIndex];
 
                 // Preencha os campos de texto e combobox com os dados da célula clicada
-                txtPesquisaNome.Text = row.Cells["Nome"].Value.ToString();
+                txtPesquisaNome.Text = row.Cells["Name"].Value.ToString();
                 
 
                 // Preencha outros campos de texto conforme necessário
@@ -194,118 +197,87 @@ namespace ProjetoInter
 
         }
 
-        public void ImagemProdutos()
+        //Função de Imagens de Pizza pela Database
+
+        public void ImagemProdutos(string nomeProduto)
         {
-            string nomeProduto = dgvProdutosPedido.CurrentRow.Cells["NomeProduto"].Value.ToString();
+            try
+            {
+                string imageFileName = Path.Combine(Application.StartupPath, "Images", "Icone-Pizza_" + nomeProduto + ".jpg");
 
-            if (nomeProduto == "Pizza Frango e Catupiry")
+                if (File.Exists(imageFileName))
+                {
+                    picImagem.Image = Image.FromFile(imageFileName);
+                }
+                else
+                {
+                    // Lidere com a situação em que a imagem não foi encontrada
+                    MessageBox.Show($"Imagem não encontrada para {nomeProduto}");
+                    picImagem.Image = null; // Defina a imagem como nula ou alguma imagem padrão
+                }
+            }
+            catch (Exception ex)
             {
-                picImagem.Image = Image.FromFile(@"C:../../Debug/Icone-Pizza_FrangoCatupiry.jpg");
+                // Lidere com exceções aqui, se necessário
+                MessageBox.Show($"Erro: {ex.Message}");
+            }
+        }
 
-            }
-            else if (nomeProduto == "Pizza Calabresa")
-            {
-                picImagem.Image = Image.FromFile(@"C:../../Debug/Icone-Pizza_Calabresa.jpg");
-            }
-            else if (nomeProduto == "Pizza Mussarela")
-            {
-                picImagem.Image = Image.FromFile(@"C:../../Debug/Icone-Pizza_Mussarela.jpg");
 
-            }
-            else if (nomeProduto == "Pizza Portuguesa")
-            {
-                picImagem.Image = Image.FromFile(@"C:../../Debug/icone-Pizza_Portuguesa.jpg");
-            }
-            else if (nomeProduto == "Pizza Pepperoni")
-            {
-                picImagem.Image = Image.FromFile(@"C:../../Debug/icone-Pizza_Pepperoni.png");
-            }
 
-            //Possibilidade de inserir mais imagens de produtos ao longo do tempo
+        //Função de Imagens Coringa
+        public void ImagemProdutosCoringa(string nomeProdutoCoringa)
+        {
+            try
+            {
+                if (nomeProdutoCoringa == "Pizza Frango e Catupiry")
+                {
+                    picImagem.Image = Image.FromFile(Path.Combine(pastaSelecionada, @"Images\Icone-Pizza_FrangoCatupiry.jpg"));
+                }
+                else if (nomeProdutoCoringa == "Pizza Calabresa")
+                {
+                    picImagem.Image = Image.FromFile(Path.Combine(pastaSelecionada, @"Images\Icone-Pizza_Calabresa.jpg"));
+                }
+                else if (nomeProdutoCoringa == "Pizza Mussarela")
+                {
+                    picImagem.Image = Image.FromFile(Path.Combine(pastaSelecionada, @"Images\Icone-Pizza_Mussarela.jpg"));
+                }
+                else if (nomeProdutoCoringa == "Pizza Portuguesa")
+                {
+                    picImagem.Image = Image.FromFile(Path.Combine(pastaSelecionada, @"Images\Icone-Pizza_Portuguesa.jpg"));
+                }
+                else if (nomeProdutoCoringa == "Pizza Pepperoni")
+                {
+                    picImagem.Image = Image.FromFile(Path.Combine(pastaSelecionada, @"Images\Icone-Pizza_Pepperoni.png"));
+                }
+                // Possibilidade de inserir mais imagens de produtos ao longo do tempo
+            }
+            catch (FileNotFoundException ex)
+            {
+                // Lidere com exceção de arquivo não encontrado aqui (você pode mostrar uma imagem padrão ou mensagem de erro)
+                MessageBox.Show($"Imagem não encontrada para {nomeProdutoCoringa}");
+                picImagem.Image = null; // Define a imagem como nula ou alguma imagem padrão
+            }
             
-
         }
 
-        public void ImagemProdutosCoringa()
-        {
-            string nomeProdutoCoringa = txtPesquisaProd.Text ;
-
-            if (nomeProdutoCoringa == "Pizza Frango e Catupiry")
-            {
-                picImagem.Image = Image.FromFile(@"C:../../Debug/Icone-Pizza_FrangoCatupiry.jpg");
-
-            }
-            else if (nomeProdutoCoringa == "Pizza Calabresa")
-            {
-                picImagem.Image = Image.FromFile(@"C:../../Debug/Icone-Pizza_Calabresa.jpg");
-            }
-            else if (nomeProdutoCoringa == "Pizza Mussarela")
-            {
-                picImagem.Image = Image.FromFile(@"C:../../Debug/Icone-Pizza_Mussarela.jpg");
-
-            }
-            else if (nomeProdutoCoringa == "Pizza Portuguesa")
-            {
-                picImagem.Image = Image.FromFile(@"C:../../Debug/icone-Pizza_Portuguesa.jpg");
-            }
-            else if (nomeProdutoCoringa == "Pizza Pepperoni")
-            {
-                picImagem.Image = Image.FromFile(@"C:../../Debug/icone-Pizza_Pepperoni.png");
-            }
-            else
-            {
-                PizzariaDB _context = new PizzariaDB();
-                string nomeProduto = dgvProdutosPedido.CurrentRow.Cells["NomeProduto"].Value.ToString();
-
-                if (nomeProduto == "Pizza Frango e Catupiry")
-                {
-                    picImagem.Image = Image.FromFile(@"C:../../Debug/Icone-Pizza_FrangoCatupiry.jpg");
-
-                }
-                else if (nomeProduto == "Pizza Calabresa")
-                {
-                    picImagem.Image = Image.FromFile(@"C:../../Debug/Icone-Pizza_Calabresa.jpg");
-                }
-                else if (nomeProduto == "Pizza Mussarela")
-                {
-                    picImagem.Image = Image.FromFile(@"C:../../Debug/Icone-Pizza_Mussarela.jpg");
-
-                }
-                else if (nomeProduto == "Pizza Portuguesa")
-                {
-                    picImagem.Image = Image.FromFile(@"C:../../Debug/icone-Pizza_Portuguesa.jpg");
-                }
-                else if (nomeProduto == "Pizza Pepperoni")
-                {
-                    picImagem.Image = Image.FromFile(@"C:../../Debug/icone-Pizza_Pepperoni.png");
-                }
-
-
-
-            }
-
-            //Possibilidade de inserir mais imagens de produtos ao longo do tempo
-
-
-        }
 
         //Botão de envio de pedido (Sem tela de Status, apenas verificação local)
 
         private void btnEnviaProduto_Click(object sender, EventArgs e)
         {
-            if (txtPesquisaNome.Text != ""  && txtPesquisaProd.Text!= "" && cboTipoVenda.Text != "")
+            if (!string.IsNullOrWhiteSpace(txtPesquisaNome.Text) && !string.IsNullOrWhiteSpace(txtPesquisaProd.Text) && !string.IsNullOrWhiteSpace(cboTipoVenda.Text) && !string.IsNullOrWhiteSpace(txtDescricao.Text))
             {
                 MessageBox.Show("Pedido Cadastrado com sucesso", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
                 MessageBox.Show("Faltam informações, por favor tente novamente", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
-
         }
 
-       
+
+
 
 
     }

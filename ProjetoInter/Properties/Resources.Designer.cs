@@ -153,6 +153,56 @@ namespace ProjetoInter.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icone_Pizza_Calabresa {
+            get {
+                object obj = ResourceManager.GetObject("Icone-Pizza_Calabresa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icone_Pizza_FrangoCatupiry {
+            get {
+                object obj = ResourceManager.GetObject("Icone-Pizza_FrangoCatupiry", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icone_Pizza_Mussarela {
+            get {
+                object obj = ResourceManager.GetObject("Icone-Pizza_Mussarela", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icone_Pizza_Pepperoni {
+            get {
+                object obj = ResourceManager.GetObject("Icone-Pizza_Pepperoni", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icone_Pizza_Portuguesa {
+            get {
+                object obj = ResourceManager.GetObject("Icone-Pizza_Portuguesa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap loginimg_png {
             get {
                 object obj = ResourceManager.GetObject("loginimg.png", resourceCulture);

@@ -251,6 +251,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Images\Icone-Pizza_Calabresa.jpg" />
+    <None Include="Images\Icone-Pizza_FrangoCatupiry.jpg" />
+    <None Include="Images\Icone-Pizza_Mussarela.jpg" />
+    <None Include="Images\Icone-Pizza_Pepperoni.png" />
+    <None Include="Images\Icone-Pizza_Portuguesa.jpg" />
     <Content Include="Images\loginimg.png.png" />
     <None Include="Resources\mercado.png" />
     <None Include="Resources\cliente.png" />
