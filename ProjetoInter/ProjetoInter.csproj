@@ -192,6 +192,10 @@
     <Compile Include="Migrations\20231025013823_configuracaocampos.designer.cs">
       <DependentUpon>20231025013823_configuracaocampos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20231108235016_valor_estoque.cs" />
+    <Compile Include="Migrations\20231108235016_valor_estoque.designer.cs">
+      <DependentUpon>20231108235016_valor_estoque.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\PizzariaDBModelSnapshot.cs" />
     <Compile Include="Modelos\Cliente.cs" />
     <Compile Include="Modelos\Estoque.cs" />

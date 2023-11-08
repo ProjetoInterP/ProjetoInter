@@ -20,6 +20,8 @@ namespace ProjetoInter.DB.Configuration
             builder.Property(x => x.DescricaoProduto).HasColumnType("varchar(400)").IsRequired();
 
             builder.Property(x => x.CategoriaProduto).HasColumnType("varchar(50)").IsRequired();
+
+            builder.Property(x => x.Valor).HasColumnType("double").IsRequired();
         }
     }
 }

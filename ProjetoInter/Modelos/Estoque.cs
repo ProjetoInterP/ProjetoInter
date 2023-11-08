@@ -14,8 +14,10 @@ namespace ProjetoInter.Modelos
 
         public int QuantidadeProduto { get; set; }
 
-        public string DescricaoProduto { get; set;  }
+        public string DescricaoProduto { get; set; }
 
-        public string CategoriaProduto{ get; set;}
+        public string CategoriaProduto { get; set; }
+
+        public double Valor { get; set; }
     }
 }
