@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -50,20 +51,29 @@ namespace ProjetoInter
             // Verifica se o valor em txtQuantidadeEstoque.Text é um número inteiro
             if (int.TryParse(txtQuantidadeEstoque.Text, out txt_Quantidade))
             {
-                Estoque estoque = new Estoque
+                // Converte o valor de txt_Valor para double
+                if (double.TryParse(txtValorEstoque.Text, out double txt_Valor))
                 {
-                    NomeProduto = txt_nome,
-                    DescricaoProduto = txt_descricao,
-                    QuantidadeProduto = txt_Quantidade,
-                    CategoriaProduto = txt_Categoria
-                };
+                    Estoque estoque = new Estoque
+                    {
+                        NomeProduto = txt_nome,
+                        DescricaoProduto = txt_descricao,
+                        QuantidadeProduto = txt_Quantidade,
+                        CategoriaProduto = txt_Categoria,
+                        Valor = txt_Valor  // Assume que há uma propriedade chamada ValorProduto no seu modelo Estoque
+                    };
 
-                // comando para adicionar no banco de dados
-                _context.Estoque.AddAsync(estoque);
-                // comando para salvar as alterações no banco de dados
-                _context.SaveChangesAsync();
-                // Limpar os campos de texto após o cadastro bem-sucedido
-                LimparCampos();
+                    // comando para adicionar no banco de dados
+                    _context.Estoque.AddAsync(estoque);
+                    // comando para salvar as alterações no banco de dados
+                    _context.SaveChangesAsync();
+                    // Limpar os campos de texto após o cadastro bem-sucedido
+                    LimparCampos();
+                }
+                else
+                {
+                    MessageBox.Show("Valor inválido. Por favor, insira um número válido para o valor.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
@@ -87,6 +97,7 @@ namespace ProjetoInter
                 estoque.DescricaoProduto = txtDescricaoProd.Text;
                 estoque.QuantidadeProduto = int.Parse(txtQuantidadeEstoque.Text);
                 estoque.CategoriaProduto = txtCategoriaEstoque.Text;
+                estoque.Valor = double.Parse(txtValorEstoque.Text);
 
                 _context.Update(estoque);
                 _context.SaveChanges();
@@ -150,6 +161,7 @@ namespace ProjetoInter
                 txtCategoriaEstoque.Text = row.Cells["CategoriaProduto"].Value.ToString();
                 txtQuantidadeEstoque.Text = row.Cells["QuantidadeProduto"].Value.ToString();
                 txtProcurarProd.Text = row.Cells["NomeProduto"].Value.ToString();
+                txtValorEstoque.Text = row.Cells["Valor"].Value.ToString;
 
 
             }
@@ -162,6 +174,7 @@ namespace ProjetoInter
             txtDescricaoProd.Text = "";
             txtCategoriaEstoque.Text = "";
             txtQuantidadeEstoque.Text = "";
+            txtValorEstoque.Text = "";
 
             // Limpe outros campos de texto conforme necessário
         }
@@ -202,6 +215,7 @@ namespace ProjetoInter
                     txtQuantidadeEstoque.Text = estoque.QuantidadeProduto.ToString();
                     txtDescricaoProd.Text = estoque.DescricaoProduto;
                     txtCategoriaEstoque.Text = estoque.CategoriaProduto;
+                    txtValorEstoque.Text = estoque.Valor.ToString();
 
 
 
