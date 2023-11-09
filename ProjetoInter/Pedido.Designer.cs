@@ -31,35 +31,35 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPedido));
             this.pnlPedidos = new System.Windows.Forms.Panel();
             this.btnEnviaProduto = new System.Windows.Forms.Button();
+            this.picVoltar = new System.Windows.Forms.PictureBox();
             this.panelContainerProdutos = new System.Windows.Forms.Panel();
             this.dgvProdutosPedido = new System.Windows.Forms.DataGridView();
+            this.picPesquisaProd = new System.Windows.Forms.PictureBox();
             this.txtPesquisaProd = new System.Windows.Forms.TextBox();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.cboTipoVenda = new System.Windows.Forms.ComboBox();
             this.lblValor = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
+            this.picImagem = new System.Windows.Forms.PictureBox();
             this.panelContainerClientes = new System.Windows.Forms.Panel();
             this.dgvClientePedido = new System.Windows.Forms.DataGridView();
+            this.picPesquisaClientes = new System.Windows.Forms.PictureBox();
             this.txtPesquisaNome = new System.Windows.Forms.TextBox();
             this.panelProdutos = new System.Windows.Forms.Panel();
             this.lblProdutos = new System.Windows.Forms.Label();
             this.panelClientes = new System.Windows.Forms.Panel();
             this.lblClientes = new System.Windows.Forms.Label();
-            this.picVoltar = new System.Windows.Forms.PictureBox();
-            this.picPesquisaProd = new System.Windows.Forms.PictureBox();
-            this.picImagem = new System.Windows.Forms.PictureBox();
-            this.picPesquisaClientes = new System.Windows.Forms.PictureBox();
             this.pnlPedidos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picVoltar)).BeginInit();
             this.panelContainerProdutos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutosPedido)).BeginInit();
-            this.panelContainerClientes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientePedido)).BeginInit();
-            this.panelProdutos.SuspendLayout();
-            this.panelClientes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picVoltar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPesquisaProd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picImagem)).BeginInit();
+            this.panelContainerClientes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientePedido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPesquisaClientes)).BeginInit();
+            this.panelProdutos.SuspendLayout();
+            this.panelClientes.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlPedidos
@@ -83,13 +83,26 @@
             this.btnEnviaProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnviaProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnviaProduto.Location = new System.Drawing.Point(696, 624);
-            this.btnEnviaProduto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEnviaProduto.Margin = new System.Windows.Forms.Padding(2);
             this.btnEnviaProduto.Name = "btnEnviaProduto";
             this.btnEnviaProduto.Size = new System.Drawing.Size(86, 33);
             this.btnEnviaProduto.TabIndex = 5;
             this.btnEnviaProduto.Text = "ENVIAR";
             this.btnEnviaProduto.UseVisualStyleBackColor = false;
             this.btnEnviaProduto.Click += new System.EventHandler(this.btnEnviaProduto_Click);
+            // 
+            // picVoltar
+            // 
+            this.picVoltar.BackColor = System.Drawing.Color.Transparent;
+            this.picVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picVoltar.Image = ((System.Drawing.Image)(resources.GetObject("picVoltar.Image")));
+            this.picVoltar.Location = new System.Drawing.Point(7, 624);
+            this.picVoltar.Name = "picVoltar";
+            this.picVoltar.Size = new System.Drawing.Size(38, 33);
+            this.picVoltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picVoltar.TabIndex = 4;
+            this.picVoltar.TabStop = false;
+            this.picVoltar.Click += new System.EventHandler(this.picVoltar_Click);
             // 
             // panelContainerProdutos
             // 
@@ -113,19 +126,32 @@
             this.dgvProdutosPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProdutosPedido.GridColor = System.Drawing.Color.Black;
             this.dgvProdutosPedido.Location = new System.Drawing.Point(278, 40);
-            this.dgvProdutosPedido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvProdutosPedido.Margin = new System.Windows.Forms.Padding(2);
             this.dgvProdutosPedido.Name = "dgvProdutosPedido";
             this.dgvProdutosPedido.RowHeadersWidth = 51;
             this.dgvProdutosPedido.RowTemplate.Height = 24;
             this.dgvProdutosPedido.Size = new System.Drawing.Size(498, 158);
             this.dgvProdutosPedido.TabIndex = 18;
+            this.dgvProdutosPedido.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProdutosPedido_CellClick);
+            // 
+            // picPesquisaProd
+            // 
+            this.picPesquisaProd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picPesquisaProd.Image = ((System.Drawing.Image)(resources.GetObject("picPesquisaProd.Image")));
+            this.picPesquisaProd.Location = new System.Drawing.Point(670, 0);
+            this.picPesquisaProd.Name = "picPesquisaProd";
+            this.picPesquisaProd.Size = new System.Drawing.Size(38, 33);
+            this.picPesquisaProd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPesquisaProd.TabIndex = 17;
+            this.picPesquisaProd.TabStop = false;
+            this.picPesquisaProd.Click += new System.EventHandler(this.picPesquisaProd_Click);
             // 
             // txtPesquisaProd
             // 
             this.txtPesquisaProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtPesquisaProd.Location = new System.Drawing.Point(278, 10);
             this.txtPesquisaProd.Name = "txtPesquisaProd";
-            this.txtPesquisaProd.Size = new System.Drawing.Size(387, 30);
+            this.txtPesquisaProd.Size = new System.Drawing.Size(387, 26);
             this.txtPesquisaProd.TabIndex = 16;
             this.txtPesquisaProd.Text = "Pesquisar por Produto";
             this.txtPesquisaProd.TextChanged += new System.EventHandler(this.txtPesquisaProd_TextChanged);
@@ -155,7 +181,7 @@
             this.cboTipoVenda.MaximumSize = new System.Drawing.Size(240, 0);
             this.cboTipoVenda.MinimumSize = new System.Drawing.Size(240, 0);
             this.cboTipoVenda.Name = "cboTipoVenda";
-            this.cboTipoVenda.Size = new System.Drawing.Size(240, 33);
+            this.cboTipoVenda.Size = new System.Drawing.Size(240, 28);
             this.cboTipoVenda.TabIndex = 14;
             this.cboTipoVenda.Text = "Tipo de venda:";
             // 
@@ -166,7 +192,7 @@
             this.lblValor.ForeColor = System.Drawing.SystemColors.Window;
             this.lblValor.Location = new System.Drawing.Point(255, 215);
             this.lblValor.Name = "lblValor";
-            this.lblValor.Size = new System.Drawing.Size(216, 31);
+            this.lblValor.Size = new System.Drawing.Size(169, 25);
             this.lblValor.TabIndex = 13;
             this.lblValor.Text = "VALOR TOTAL: ";
             // 
@@ -178,9 +204,18 @@
             this.lblTotal.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lblTotal.Location = new System.Drawing.Point(430, 215);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(0, 29);
+            this.lblTotal.Size = new System.Drawing.Size(0, 24);
             this.lblTotal.TabIndex = 12;
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // picImagem
+            // 
+            this.picImagem.Location = new System.Drawing.Point(6, 9);
+            this.picImagem.Name = "picImagem";
+            this.picImagem.Size = new System.Drawing.Size(240, 128);
+            this.picImagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picImagem.TabIndex = 0;
+            this.picImagem.TabStop = false;
             // 
             // panelContainerClientes
             // 
@@ -199,7 +234,7 @@
             this.dgvClientePedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientePedido.GridColor = System.Drawing.Color.Black;
             this.dgvClientePedido.Location = new System.Drawing.Point(14, 39);
-            this.dgvClientePedido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvClientePedido.Margin = new System.Windows.Forms.Padding(2);
             this.dgvClientePedido.Name = "dgvClientePedido";
             this.dgvClientePedido.RowHeadersWidth = 51;
             this.dgvClientePedido.RowTemplate.Height = 24;
@@ -207,12 +242,25 @@
             this.dgvClientePedido.TabIndex = 4;
             this.dgvClientePedido.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientePedido_CellClick);
             // 
+            // picPesquisaClientes
+            // 
+            this.picPesquisaClientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picPesquisaClientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picPesquisaClientes.Image = ((System.Drawing.Image)(resources.GetObject("picPesquisaClientes.Image")));
+            this.picPesquisaClientes.Location = new System.Drawing.Point(375, 0);
+            this.picPesquisaClientes.Name = "picPesquisaClientes";
+            this.picPesquisaClientes.Size = new System.Drawing.Size(38, 33);
+            this.picPesquisaClientes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPesquisaClientes.TabIndex = 2;
+            this.picPesquisaClientes.TabStop = false;
+            this.picPesquisaClientes.Click += new System.EventHandler(this.picPesquisaClientes_Click);
+            // 
             // txtPesquisaNome
             // 
             this.txtPesquisaNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtPesquisaNome.Location = new System.Drawing.Point(14, 3);
             this.txtPesquisaNome.Name = "txtPesquisaNome";
-            this.txtPesquisaNome.Size = new System.Drawing.Size(355, 30);
+            this.txtPesquisaNome.Size = new System.Drawing.Size(355, 26);
             this.txtPesquisaNome.TabIndex = 1;
             this.txtPesquisaNome.Text = "Pesquisar por nome";
             this.txtPesquisaNome.Enter += new System.EventHandler(this.txtPesquisaNome_Enter);
@@ -234,7 +282,7 @@
             this.lblProdutos.ForeColor = System.Drawing.SystemColors.Window;
             this.lblProdutos.Location = new System.Drawing.Point(342, 9);
             this.lblProdutos.Name = "lblProdutos";
-            this.lblProdutos.Size = new System.Drawing.Size(158, 29);
+            this.lblProdutos.Size = new System.Drawing.Size(123, 24);
             this.lblProdutos.TabIndex = 1;
             this.lblProdutos.Text = "PRODUTOS";
             // 
@@ -255,56 +303,9 @@
             this.lblClientes.ForeColor = System.Drawing.SystemColors.Window;
             this.lblClientes.Location = new System.Drawing.Point(342, 9);
             this.lblClientes.Name = "lblClientes";
-            this.lblClientes.Size = new System.Drawing.Size(139, 29);
+            this.lblClientes.Size = new System.Drawing.Size(109, 24);
             this.lblClientes.TabIndex = 0;
             this.lblClientes.Text = "CLIENTES";
-            // 
-            // picVoltar
-            // 
-            this.picVoltar.BackColor = System.Drawing.Color.Transparent;
-            this.picVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picVoltar.Image = ((System.Drawing.Image)(resources.GetObject("picVoltar.Image")));
-            this.picVoltar.Location = new System.Drawing.Point(7, 624);
-            this.picVoltar.Name = "picVoltar";
-            this.picVoltar.Size = new System.Drawing.Size(38, 33);
-            this.picVoltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picVoltar.TabIndex = 4;
-            this.picVoltar.TabStop = false;
-            this.picVoltar.Click += new System.EventHandler(this.picVoltar_Click);
-            // 
-            // picPesquisaProd
-            // 
-            this.picPesquisaProd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picPesquisaProd.Image = ((System.Drawing.Image)(resources.GetObject("picPesquisaProd.Image")));
-            this.picPesquisaProd.Location = new System.Drawing.Point(670, 0);
-            this.picPesquisaProd.Name = "picPesquisaProd";
-            this.picPesquisaProd.Size = new System.Drawing.Size(38, 33);
-            this.picPesquisaProd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picPesquisaProd.TabIndex = 17;
-            this.picPesquisaProd.TabStop = false;
-            this.picPesquisaProd.Click += new System.EventHandler(this.picPesquisaProd_Click);
-            // 
-            // picImagem
-            // 
-            this.picImagem.Location = new System.Drawing.Point(6, 9);
-            this.picImagem.Name = "picImagem";
-            this.picImagem.Size = new System.Drawing.Size(240, 128);
-            this.picImagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picImagem.TabIndex = 0;
-            this.picImagem.TabStop = false;
-            // 
-            // picPesquisaClientes
-            // 
-            this.picPesquisaClientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picPesquisaClientes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picPesquisaClientes.Image = ((System.Drawing.Image)(resources.GetObject("picPesquisaClientes.Image")));
-            this.picPesquisaClientes.Location = new System.Drawing.Point(375, 0);
-            this.picPesquisaClientes.Name = "picPesquisaClientes";
-            this.picPesquisaClientes.Size = new System.Drawing.Size(38, 33);
-            this.picPesquisaClientes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picPesquisaClientes.TabIndex = 2;
-            this.picPesquisaClientes.TabStop = false;
-            this.picPesquisaClientes.Click += new System.EventHandler(this.picPesquisaClientes_Click);
             // 
             // frmPedido
             // 
@@ -320,20 +321,20 @@
             this.Text = "Pedido";
             this.Load += new System.EventHandler(this.frmPedido_Load);
             this.pnlPedidos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picVoltar)).EndInit();
             this.panelContainerProdutos.ResumeLayout(false);
             this.panelContainerProdutos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutosPedido)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPesquisaProd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImagem)).EndInit();
             this.panelContainerClientes.ResumeLayout(false);
             this.panelContainerClientes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientePedido)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPesquisaClientes)).EndInit();
             this.panelProdutos.ResumeLayout(false);
             this.panelProdutos.PerformLayout();
             this.panelClientes.ResumeLayout(false);
             this.panelClientes.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picVoltar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPesquisaProd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picImagem)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPesquisaClientes)).EndInit();
             this.ResumeLayout(false);
 
         }

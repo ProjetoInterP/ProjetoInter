@@ -161,7 +161,7 @@ namespace ProjetoInter
                 txtCategoriaEstoque.Text = row.Cells["CategoriaProduto"].Value.ToString();
                 txtQuantidadeEstoque.Text = row.Cells["QuantidadeProduto"].Value.ToString();
                 txtProcurarProd.Text = row.Cells["NomeProduto"].Value.ToString();
-                txtValorEstoque.Text = row.Cells["Valor"].Value.ToString;
+                txtValorEstoque.Text = row.Cells["Valor"].Value.ToString();
 
 
             }

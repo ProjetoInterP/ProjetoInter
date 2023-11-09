@@ -108,6 +108,9 @@ namespace ProjetoInter
             Application.Exit();
         }
 
-        
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
