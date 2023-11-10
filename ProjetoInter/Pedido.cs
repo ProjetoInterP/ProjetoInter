@@ -254,11 +254,11 @@ namespace ProjetoInter
             // Define os valores das pizzas coringa
             Dictionary<string, double> valoresPizzasCoringa = new Dictionary<string, double>
     {
-        { "Pizza Frango e Catupiry", 20.00 },
-        { "Pizza Calabresa", 18.00 },
-        { "Pizza Mussarela", 16.00 },
-        { "Pizza Portuguesa", 22.00 },
-        { "Pizza Pepperoni", 21.00 }
+        { "Pizza Frango e Catupiry", 27.00 },
+        { "Pizza Calabresa", 25.00 },
+        { "Pizza Mussarela", 25.00 },
+        { "Pizza Portuguesa", 27.00 },
+        { "Pizza Pepperoni", 29.00 }
     };
 
             // Verifica se o nome da pizza está no dicionário e retorna o valor correspondente
