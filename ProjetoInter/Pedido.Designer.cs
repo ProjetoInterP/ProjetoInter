@@ -154,7 +154,6 @@
             this.txtPesquisaProd.Size = new System.Drawing.Size(387, 26);
             this.txtPesquisaProd.TabIndex = 16;
             this.txtPesquisaProd.Text = "Pesquisar por Produto";
-            this.txtPesquisaProd.TextChanged += new System.EventHandler(this.txtPesquisaProd_TextChanged);
             this.txtPesquisaProd.Enter += new System.EventHandler(this.txtPesquisaProd_Enter);
             this.txtPesquisaProd.Leave += new System.EventHandler(this.txtPesquisaProd_Leave);
             // 
