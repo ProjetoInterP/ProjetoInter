@@ -292,7 +292,7 @@ namespace ProjetoInter
                     {
                         estoque.QuantidadeProduto -= 1;
                         db.SaveChanges();
-                        MessageBox.Show($"Produto '{nomeProduto}' para '{nomeCliente}' enviado com sucesso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show($"Pedido de '{nomeCliente}' enviado com sucesso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
