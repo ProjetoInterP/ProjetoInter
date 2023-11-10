@@ -19,6 +19,7 @@ namespace ProjetoInter
         private string cargoUsuário;
         private frmLogin frmLogin;
         string pastaSelecionada = "";
+        private string nomePizzaCoringaSelecionada;
         private Dictionary<string, string> imagensProdutos = new Dictionary<string, string>
         {
             { "Pizza Frango e Catupiry", "Icone-Pizza_FrangoCatupiry.jpg" },
@@ -70,14 +71,19 @@ namespace ProjetoInter
         {
             string nomeProduto = txtPesquisaProd.Text;
 
-            if (pizzasCoringa.Contains(nomeProduto))
+            double valorProduto = 0;
+
+            using (var db = new PizzariaDB())
             {
-                double valorPizza = ObterValorPizzaCoringaLocal(nomeProduto);
-                lblTotal.Text = valorPizza.ToString("0.00");
-            }
-            else
-            {
-                using (var db = new PizzariaDB())
+                if (pizzasCoringa.Contains(nomeProduto))
+                {
+                    // Se for uma pizza coringa, soma ao valor do produto
+                    valorProduto = ObterValorPizzaCoringaLocal(nomeProduto);
+
+                    // Armazena o nome da pizza coringa selecionada na variável global
+                    nomePizzaCoringaSelecionada = nomeProduto;
+                }
+                else
                 {
                     var produtos = db.Estoque
                         .Where(u => u.NomeProduto.Contains(nomeProduto))
@@ -85,35 +91,43 @@ namespace ProjetoInter
 
                     if (produtos.Any())
                     {
-                        double valorProduto = produtos.First().Valor;
-                        lblTotal.Text = valorProduto.ToString("0.00");
-                    }
-                    else
-                    {
-                        lblTotal.Text = "0.00";
+                        // Supondo que você queira pegar o valor do primeiro produto retornado da consulta
+                        valorProduto = produtos.First().Valor;
                     }
                 }
             }
 
+            lblTotal.Text = valorProduto.ToString("0.00");
+
+            // Exibir a imagem do produto
             ExibirImagemProduto(nomeProduto);
         }
 
-        private static double ObterValorPizzaCoringaLocal(string nomePizza)
-        {
-            Dictionary<string, double> valoresPizzasCoringa = new Dictionary<string, double>
-            {
-                { "Pizza Frango e Catupiry", 20.00 },
-                { "Pizza Calabresa", 18.00 },
-                { "Pizza Mussarela", 16.00 },
-                { "Pizza Portuguesa", 22.00 },
-                { "Pizza Pepperoni", 21.00 }
-            };
 
+
+
+
+
+
+        private double ObterValorPizzaCoringaLocal(string nomePizza)
+        {
+            // Define os valores das pizzas coringa
+            Dictionary<string, double> valoresPizzasCoringa = new Dictionary<string, double>
+    {
+        { "Pizza Frango e Catupiry", 27.00 },
+        { "Pizza Calabresa", 25.00 },
+        { "Pizza Mussarela", 25.00 },
+        { "Pizza Portuguesa", 27.00 },
+        { "Pizza Pepperoni", 29.00 }
+    };
+
+            // Verifica se o nome da pizza está no dicionário e retorna o valor correspondente
             if (valoresPizzasCoringa.ContainsKey(nomePizza))
             {
                 return valoresPizzasCoringa[nomePizza];
             }
 
+            // Se o nome da pizza não estiver no dicionário, retorna 0 como valor padrão
             return 0;
         }
 
@@ -224,9 +238,10 @@ namespace ProjetoInter
 
                 double valorProduto = Convert.ToDouble(row.Cells["Valor"].Value);
 
-                if (pizzasCoringa.Contains(row.Cells["NomeProduto"].Value.ToString()))
+                // Se o produto selecionado for uma pizza coringa, soma ao valor do produto
+                if (!string.IsNullOrEmpty(nomePizzaCoringaSelecionada) && pizzasCoringa.Contains(nomePizzaCoringaSelecionada))
                 {
-                    double valorPizzaCoringa = ObterValorPizzaCoringa(row.Cells["NomeProduto"].Value.ToString());
+                    double valorPizzaCoringa = ObterValorPizzaCoringa(nomePizzaCoringaSelecionada);
                     valorProduto += valorPizzaCoringa;
                 }
 
