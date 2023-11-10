@@ -161,23 +161,30 @@ namespace ProjetoInter
             }
         }
 
-        //Carrega informações do banco de dados
+        // Este método é chamado quando o formulário é carregado
         private void frmPedido_Load(object sender, EventArgs e)
         {
+            // Usando um bloco 'using' para garantir que o contexto do banco de dados seja liberado após o uso
             using (var db = new PizzariaDB())
             {
-                //usa o dgvClientePedido
-                var clientes = db.Clientes.ToList(); 
+                // Obtém todos os clientes do banco de dados e os vincula ao controle DataGridView dgvClientePedido
+                var clientes = db.Clientes.ToList();
                 dgvClientePedido.DataSource = clientes;
 
-
+                // Obtém todos os produtos do banco de dados e os vincula ao controle DataGridView dgvProdutosPedido
                 var produtos = db.Estoque.ToList();
                 dgvProdutosPedido.DataSource = produtos;
             }
 
+            // Configurações para o controle DataGridView dgvClientePedido:
+            // - Impede a seleção múltipla de linhas
+            // - Permite a seleção de linhas inteiras
             dgvClientePedido.MultiSelect = false;
             dgvClientePedido.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
+            // Configurações para o controle DataGridView dgvProdutosPedido:
+            // - Impede a seleção múltipla de linhas
+            // - Permite a seleção de linhas inteiras
             dgvProdutosPedido.MultiSelect = false;
             dgvProdutosPedido.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
